@@ -1,0 +1,155 @@
+.main-header {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+}
+
+.upper-header {
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #333;
+}
+
+/* AREA SINISTRA: ICONE E TESTO */
+.left-header {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.left-header a,
+.left-header button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 0.6rem;
+    padding: 0.4rem 0.2rem;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.left-header a:hover,
+.left-header button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.left-header img {
+    height: 1.4rem;
+    width: auto;
+    margin-bottom: 0.3em;
+}
+
+.left-header span {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+/* AREA CENTRALE: LOGO */
+.center-header {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.center-header img {
+    height: 2.8rem;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* AREA DESTRA: LINGUA E BOTTONE */
+.right-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.language-switcher a {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+/* RIPRISTINO HOVER LINGUA */
+.language-switcher a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.divider-lang {
+    width: 1px;
+    height: 14px;
+    background-color: #444;
+    margin: 0 2px;
+}
+
+.selected{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.unselected {
+    text-decoration: none;
+    color: #777;
+}
+
+.div-account {
+    display: flex;
+    align-items: center;
+}
+
+.div-account button {
+    background-color: #f1bd39;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+/* RIPRISTINO HOVER BOTTONE ABBONATI */
+.div-account button:hover {
+    background-color: #d9a82d;
+}
+
+.div-account a {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+/* HOVER ICONA ACCOUNT */
+.div-account a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.div-account img {
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+}
