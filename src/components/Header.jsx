@@ -4,72 +4,70 @@ import './NavBar.css'
 
 export default function Header() {
     return (
-        <header className="main-header">
+        <header className="main-header" role="banner">
             <div className="upper-header">
                 {/* SINISTRA: Journal e Services */}
                 <div className="left-header">
-                    <a href="/">
-                        <img src="https://placehold.co/40x40/666666/ffffff?text=J" alt="Journal" />
+                    <a href="#newspaper" aria-label=" Digital newspaper">
+                        <img src="https://placehold.co/40x40/666666/ffffff?text=J" alt="" aria-hidden="true" />
                         <span>Le journal</span>
                     </a>
-                    <button>
-                        <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="Services" />
+                    <button type="button" aria-label="Open services">
+                        <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
                         <span>Services</span>
                     </button>
                 </div>
-
-                {/* CENTRO: Logo */}
+                {/* CENTRO: Logo principale */}
                 <div className="center-header">
-                    <a href="/">
-                        <img
-                            src="https://placehold.co/600x120/666666/ffffff?text=Le+Monde"
-                            alt="Le Monde Logo"
-                        />
+                    <a href="#homepage" aria-label="Le Monde - Back to the homepage">
+                        <img src="https://placehold.co/600x120/666666/ffffff?text=Le+Monde" alt=""/>
                     </a>
                 </div>
 
                 {/* DESTRA: Lingua e Abbonamento */}
                 <div className="right-header">
-                    <div className="language-switcher">
-                        <a href="/" className="selected">FR</a>
-                        <div className="divider-lang"></div>
-                        <a href="/" className="unselected">EN</a>
-                    </div>
-
+                    <nav className="language-switcher" aria-label="Language selector">
+                        <a href="fr" className="selected" aria-current="page" lang="fr">FR</a>
+                        <div className="divider-lang" aria-hidden="true"></div>
+                        <a href="en" className="unselected" lang="en">EN</a>
+                    </nav>
                     <div className="div-account">
-                        <button>S'abonner</button>
-                        <a href="/">
-                            <img src="https://placehold.co/40x40/gray/white?text=A" alt="Account" />
+                        <button type="button" className="btn-subscribe">S'abonner</button>
+                        <a href="login" aria-label="Log in to your account">
+                            <img src="https://placehold.co/40x40/666666/ffffff?text=A" alt="" aria-hidden="true" />
                         </a>
                     </div>
                 </div>
             </div>
 
-            {/* Barra di navigazione secondaria */}
-            <nav className="nav-bar">
-                <button className="nav-button">
-                    <img src="https://placehold.co/40x40/gray/white?text=M" alt="Menu"/>
+            {/* Barra di navigazione principale */}
+            <nav className="nav-bar" aria-label="Main navigation">
+                <button className="nav-button" aria-expanded="false" aria-label="Open menu">
+                    <img src="https://placehold.co/40x40/666666/ffffff?text=M" alt="" aria-hidden="true" />
                     <span>Menu</span>
                 </button>
-                <a href="/" className="nav-button">
-                    <img src="https://placehold.co/40x40/gray/white?text=S" alt="Search"/>
+
+                <a href="#search" className="nav-button" aria-label="Search">
+                    <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
                 </a>
-                <div className="menu-divider"></div>
+
+                <div className="menu-divider" aria-hidden="true"></div>
+
                 <ul className="nav-link">
-                    <li><a href="/" className="nav-highlight">Proche-Orient</a></li>
-                    <li><a href="/" className="nav-highlight">Hongrie</a></li>
-                    <li className="list-divider"></li>
-                    <li><a href="/">International</a></li>
-                    <li><a href="/">Planète</a></li>
-                    <li><a href="/">Politique</a></li>
-                    <li><a href="/">Société</a></li>
-                    <li><a href="/">Économie</a></li>
-                    <li><a href="/">Idées</a></li>
-                    <li><a href="/">Culture</a></li>
-                    <li><a href="/">Le Goût du Monde</a></li>
-                    <li><a href="/">Sciences</a></li>
-                    <li><a href="/">Sport</a></li>
-                    <li><a href="/">Pixels</a></li>
+                    <li><a href="#Proche-Orient" className="nav-highlight">Proche-Orient</a></li>
+                    <li><a href="#Hongrie" className="nav-highlight">Hongrie</a></li>
+                    <li className="list-divider" aria-hidden="true"></li>
+                    <li><a href="#International">International</a></li>
+                    <li><a href="#Planète">Planète</a></li>
+                    <li><a href="#Politique">Politique</a></li>
+                    <li><a href="#Société">Société</a></li>
+                    <li><a href="#Économie">Économie</a></li>
+                    <li><a href="#Idées">Idées</a></li>
+                    <li><a href="#Culture">Culture</a></li>
+                    <li><a href="#Le Goût du Monde">Le Goût du Monde</a></li>
+                    <li><a href="#Sciences">Sciences</a></li>
+                    <li><a href="#Sport">Sport</a></li>
+                    <li><a href="#Pixels">Pixels</a></li>
                 </ul>
             </nav>
         </header>
