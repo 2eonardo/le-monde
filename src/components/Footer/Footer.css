@@ -1,0 +1,133 @@
+.main-footer {
+    background-color: #2c333a;
+    color: #fff;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    font-size: 13px;
+}
+
+.main-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-container {
+    max-width: 1000px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 30px;
+    align-items: start;
+}
+
+.footer-title {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.second-title {
+    margin-top: 25px;
+}
+
+.footer-list {
+    list-style-type: square;
+    padding-left: 15px;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+/* RIGHE: ora finiscono con l'ultima parola grazie al contenitore 'table' */
+.footer-sep {
+    border: 0;
+    border-top: 1px solid #454d55;
+    margin: 25px 0;
+    width: 100%;
+}
+
+/* CLASSE DIVIDER (Verticale tra iOS e Android) */
+.divider {
+    width: 1px;
+    height: 12px;
+    display: inline-block;
+}
+
+/* ALLINEAMENTO ICONE COLONNA 4 */
+.app-links, .social-links a, .footer-list-icons li a {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Spazio tra icona e testo */
+}
+
+.app-links img, .footer-list-icons img, .social-links img {
+    display: block;
+    flex-shrink: 0; /* Impedisce all'icona di rimpicciolirsi */
+}
+
+/* INFO LEGALI CENTRATE CON QUADRATINI */
+.title-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.legal-links {
+    display: flex;
+    list-style-type: square;
+    padding: 0;
+    margin: 10px 0 0 0;
+    gap: 30px; /* Distanza tra i blocchi [quadratino+testo] */
+}
+
+.legal-links li {
+    display: list-item;
+    list-style-position: inside;
+    font-size: 12px;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+/* Spaziature specifiche per la colonna 4 */
+.sub-section {
+    margin-bottom: 15px;
+}
+
+.footer-list-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list-icons li {
+    margin-bottom: 12px;
+}
+
+.app-links a, .social-links a, .footer-list-icons a {
+    display: inline-flex; /* Fondamentale per allineare icona e testo */
+    align-items: center;
+    gap: 8px;
+}
+
