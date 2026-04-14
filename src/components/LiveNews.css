@@ -1,0 +1,82 @@
+.live-news {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0; /* Padding verticale per dare respiro */
+    margin: 0.5rem 1rem;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.news div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+    min-height: 1.2rem;
+}
+
+.news-time {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+}
+
+.span-label {
+    color: #bc0000;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.news a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    display: block;
+}
+
+.news:hover a {
+    text-decoration: underline;
+    color: #000;
+}
+
+.divider {
+    width: 1px;
+    background-color: #eee;
+    margin: 0;
+}
+
+.button-div {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.live-news-button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 6px 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.live-news-button span {
+    font-size: 0.85rem;
+}
+
+.live-news-button:hover {
+    background-color: #f9f9f9;
+}

@@ -8,7 +8,7 @@ export default function Header() {
             <div className="upper-header">
                 {/* SINISTRA: Journal e Services */}
                 <div className="left-header">
-                    <a href="#newspaper" aria-label=" Digital newspaper">
+                    <a href="/newspaper" aria-label=" Digital newspaper">
                         <img src="https://placehold.co/40x40/666666/ffffff?text=J" alt="" aria-hidden="true" />
                         <span>Le journal</span>
                     </a>
@@ -19,7 +19,7 @@ export default function Header() {
                 </div>
                 {/* CENTRO: Logo principale */}
                 <div className="center-header">
-                    <a href="#homepage" aria-label="Le Monde - Back to the homepage">
+                    <a href="/homepage" aria-label="Le Monde - Back to the homepage">
                         <img src="https://placehold.co/600x120/666666/ffffff?text=Le+Monde" alt=""/>
                     </a>
                 </div>
@@ -27,13 +27,13 @@ export default function Header() {
                 {/* DESTRA: Lingua e Abbonamento */}
                 <div className="right-header">
                     <nav className="language-switcher" aria-label="Language selector">
-                        <a href="fr" className="selected" aria-current="page" lang="fr">FR</a>
+                        <a href="/fr" className="selected" aria-current="page" lang="fr">FR</a>
                         <div className="divider-lang" aria-hidden="true"></div>
-                        <a href="en" className="unselected" lang="en">EN</a>
+                        <a href="/en" className="unselected" lang="en">EN</a>
                     </nav>
                     <div className="div-account">
                         <button type="button" className="btn-subscribe">S'abonner</button>
-                        <a href="login" aria-label="Log in to your account">
+                        <a href="/login" aria-label="Log in to your account">
                             <img src="https://placehold.co/40x40/666666/ffffff?text=A" alt="" aria-hidden="true" />
                         </a>
                     </div>
@@ -47,27 +47,27 @@ export default function Header() {
                     <span>Menu</span>
                 </button>
 
-                <a href="#search" className="nav-button" aria-label="Search">
+                <a href="/search" className="nav-button" aria-label="Search">
                     <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
                 </a>
 
                 <div className="menu-divider" aria-hidden="true"></div>
 
                 <ul className="nav-link">
-                    <li><a href="#Proche-Orient" className="nav-highlight">Proche-Orient</a></li>
-                    <li><a href="#Hongrie" className="nav-highlight">Hongrie</a></li>
+                    <li><a href="/Proche-Orient" className="nav-highlight">Proche-Orient</a></li>
+                    <li><a href="/Hongrie" className="nav-highlight">Hongrie</a></li>
                     <li className="list-divider" aria-hidden="true"></li>
-                    <li><a href="#International">International</a></li>
-                    <li><a href="#Planète">Planète</a></li>
-                    <li><a href="#Politique">Politique</a></li>
-                    <li><a href="#Société">Société</a></li>
-                    <li><a href="#Économie">Économie</a></li>
-                    <li><a href="#Idées">Idées</a></li>
-                    <li><a href="#Culture">Culture</a></li>
-                    <li><a href="#Le Goût du Monde">Le Goût du Monde</a></li>
-                    <li><a href="#Sciences">Sciences</a></li>
-                    <li><a href="#Sport">Sport</a></li>
-                    <li><a href="#Pixels">Pixels</a></li>
+                    <li><a href="/International">International</a></li>
+                    <li><a href="/Planète">Planète</a></li>
+                    <li><a href="/Politique">Politique</a></li>
+                    <li><a href="/Société">Société</a></li>
+                    <li><a href="/Économie">Économie</a></li>
+                    <li><a href="/Idées">Idées</a></li>
+                    <li><a href="/Culture">Culture</a></li>
+                    <li><a href="/Le Goût du Monde">Le Goût du Monde</a></li>
+                    <li><a href="/Sciences">Sciences</a></li>
+                    <li><a href="/Sport">Sport</a></li>
+                    <li><a href="/Pixels">Pixels</a></li>
                 </ul>
             </nav>
         </header>

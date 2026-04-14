@@ -15,7 +15,6 @@
     border-bottom: 1px solid #333;
 }
 
-/* AREA SINISTRA: ICONE E TESTO */
 .left-header {
     display: flex;
     align-items: center;
@@ -55,7 +54,7 @@
     letter-spacing: 0.05rem;
 }
 
-/* AREA CENTRALE: LOGO */
+
 .center-header {
     flex: 2;
     display: flex;
@@ -68,7 +67,6 @@
     object-fit: contain;
 }
 
-/* AREA DESTRA: LINGUA E BOTTONE */
 .right-header {
     display: flex;
     align-items: center;
@@ -90,7 +88,6 @@
     transition: background-color 0.2s;
 }
 
-/* RIPRISTINO HOVER LINGUA */
 .language-switcher a:hover {
     background-color: rgba(255, 255, 255, 0.15);
 }
@@ -130,7 +127,6 @@
     transition: background-color 0.2s;
 }
 
-/* RIPRISTINO HOVER BOTTONE ABBONATI */
 .div-account button:hover {
     background-color: #d9a82d;
 }
@@ -143,7 +139,6 @@
     transition: background-color 0.2s;
 }
 
-/* HOVER ICONA ACCOUNT */
 .div-account a:hover {
     background-color: rgba(255, 255, 255, 0.15);
 }
