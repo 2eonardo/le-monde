@@ -2,9 +2,6 @@
     .live-news .news:last-of-type {
         display: none;
     }
-    .live-news .news:nth-last-of-type(2) + .divider {
-        display: none;
-    }
 }
 
 @media (max-width: 1024px) {

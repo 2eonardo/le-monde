@@ -24,10 +24,8 @@ export default function LiveNews() {
                             <span>{item.text}</span>
                         </a>
                     </article>
-                    {index < newsData.length - 1 && <div className="divider" aria-hidden="true"></div>}
                 </React.Fragment>
             ))}
-            <div className="divider" aria-hidden="true"></div>
             <div className="button-div">
                 <button className="live-news-button" aria-label="Other news">
                     <span>Voir plus ›</span>
