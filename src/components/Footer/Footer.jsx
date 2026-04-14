@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import './FooterResponsive.css';
 
 export default function Footer() {
     const icon = "https://placehold.co/16x16/777/white?text=i";
@@ -8,6 +9,8 @@ export default function Footer() {
         <footer className="main-footer" aria-label="Sitemap">
             <div className="footer-container">
                 <div className="footer-grid">
+
+                    {/* -- Services & Guides -- */}
                     <section className="footer-column">
                         <h2 className="footer-title">LOREM IPSUM SERVICES</h2>
                         <ul className="footer-list">
@@ -18,6 +21,7 @@ export default function Footer() {
                             <li><a href="/incididunt-ut-labore">Incididunt ut labore</a></li>
                             <li><a href="/dolore-magna-aliqua">Dolore magna aliqua</a></li>
                         </ul>
+
                         <h2 className="footer-title second-title">LOREM GUIDES</h2>
                         <ul className="footer-list">
                             <li><a href="/minim-veniam-quis">Minim veniam quis</a></li>
@@ -39,6 +43,7 @@ export default function Footer() {
                             <li><a href="/excepteur-sint">Excepteur sint</a></li>
                             <li><a href="/occaecat-cupidatat">Occaecat cupidatat</a></li>
                         </ul>
+
                         <h2 className="footer-title second-title">LOREM PARTNERS</h2>
                         <ul className="footer-list">
                             <li><a href="/non-proident-sunt">Non proident sunt</a></li>
@@ -47,6 +52,7 @@ export default function Footer() {
                         </ul>
                     </section>
 
+                    {/* -- Group Sites -- */}
                     <section className="footer-column">
                         <h2 className="footer-title">LOREM GROUP SITES</h2>
                         <ul className="footer-list">
@@ -62,17 +68,26 @@ export default function Footer() {
                     </section>
 
                     <section className="footer-column-special">
-                        <h2 className="footer-title">LOREM NEWSLETTER</h2>
-                        <a href="/lorem-ipsum-newsletter" className="flex-link"><img src={icon} alt="" />Lorem ipsum newsletter</a>
+                        <div className="footer-special">
+                            <div>
+                                <h2 className="footer-title">LOREM NEWSLETTER</h2>
+                                <a href="/lorem-ipsum-newsletter" className="flex-link">
+                                    <img src={icon} alt="" />
+                                    Lorem ipsum newsletter
+                                </a>
+                            </div>
 
-                        <hr className="footer-sep" aria-hidden="true" />
+                            <hr className="footer-sep" aria-hidden="true" />
 
-                        <h2 className="footer-title">LOREM MOBILE APPS</h2>
-                        <div className="flex-link">
-                            <img src={icon} alt="" />
-                            <a href="/lorem-ios">Lorem iOS</a>
-                            <div className="divider" aria-hidden="true"></div>
-                            <a href="/lorem-android">Lorem Android</a>
+                            <div>
+                                <h2 className="footer-title">LOREM MOBILE APPS</h2>
+                                <div className="flex-link">
+                                    <img src={icon} alt="" />
+                                    <a href="/lorem-ios">Lorem iOS</a>
+                                    <div className="divider" aria-hidden="true"></div>
+                                    <a href="/lorem-android">Lorem Android</a>
+                                </div>
+                            </div>
                         </div>
 
                         <hr className="footer-sep" aria-hidden="true" />
@@ -90,6 +105,7 @@ export default function Footer() {
                 </div>
 
                 <hr className="footer-sep" aria-hidden="true" />
+
                 <nav className="centered-section" aria-label="Legal info">
                     <span className="footer-title">LOREM LEGAL INFO</span>
                     <ul className="legal-links">
@@ -102,6 +118,7 @@ export default function Footer() {
                 </nav>
 
                 <hr className="footer-sep" aria-hidden="true" />
+
                 <section className="centered-section" aria-label="Social">
                     <span className="footer-title">FOLLOW LOREM</span>
                     <div className="social-links">

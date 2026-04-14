@@ -1,5 +1,6 @@
 .main-footer {
     background-color: #2c333a;
+    width: 100%;
     color: #fff;
     padding: 50px 0;
     font-family: Arial, sans-serif;
@@ -11,10 +12,12 @@
 .main-footer a:hover { text-decoration: underline; }
 
 .footer-container {
-    width: fit-content;
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .footer-grid {
@@ -33,15 +36,27 @@
 
 .second-title { margin-top: 25px; }
 
-.footer-list, .legal-links {
+.footer-list {
     list-style-type: square;
     padding-left: 15px;
     margin: 0;
 }
-
 .footer-list li, .legal-links li { margin-bottom: 8px; }
 
-/* Righe e divisori */
+.footer-list-icons {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+.footer-list-icons li { margin-bottom: 12px; }
+
+.flex-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.flex-link img { flex-shrink: 0; display: block; }
+
 .footer-sep {
     border: 0;
     border-top: 1px solid #454d55;
@@ -56,13 +71,6 @@
     display: inline-block;
     margin: 0 10px;
 }
-.flex-link, .social-links, .legal-links {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.flex-link img { flex-shrink: 0; display: block; }
 
 .centered-section {
     display: flex;
@@ -72,18 +80,18 @@
 }
 
 .legal-links {
-    list-style-position: inside;
+    display: flex;
+    align-items: center;
     gap: 30px;
-    margin-top: 10px;
+    list-style-type: square;
+    list-style-position: inside;
+    padding-left: 15px;
+    margin: 10px 0 0 0;
 }
 
 .social-links {
-    gap: 25px; margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 15px;
 }
-
-.footer-list-icons {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px; }
-.footer-list-icons li {
-    margin-bottom: 12px; }

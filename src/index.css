@@ -23,3 +23,16 @@ body {
      margin: 0;
      /* Altri tuoi stili... */
    }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* Impedisce al contenuto che "sborda" di creare la fascia bianca a destra */
+    overflow-x: hidden;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
