@@ -1,6 +1,7 @@
 import React from 'react';
 import './UpperHeader.css';
 import './NavBar.css'
+import './ResponsiveHeader.css'
 
 export default function Header() {
     return (
