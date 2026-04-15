@@ -1,9 +1,9 @@
 .main-footer {
     background-color: #2c333a;
     color: #fff;
-    padding: 50px 0;
+    padding: 3.12rem 0;
     font-family: Arial, sans-serif;
-    font-size: 13px;
+    font-size: 0.81rem;
     line-height: 1.4;
 }
 
@@ -11,9 +11,9 @@
 .main-footer a:hover { text-decoration: underline; }
 
 .footer-container {
-    max-width: 1000px;
+    max-width: 62.5rem;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.25rem;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -21,51 +21,51 @@
 .footer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr auto;
-    gap: 30px;
+    gap: 1.87rem;
 }
 
 .footer-title {
-    font-size: 11px;
+    font-size: 0.68rem;
     font-weight: 900;
-    letter-spacing: 0.8px;
-    margin-bottom: 15px;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.94rem;
     text-transform: uppercase;
 }
 
-.second-title { margin-top: 25px; }
+.second-title { margin-top: 1.56rem; }
 
 .footer-list {
     list-style-type: square;
-    padding-left: 15px;
+    padding-left: 0.94rem;
     margin: 0;
 }
-.footer-list li { margin-bottom: 8px; }
+.footer-list li { margin-bottom: 0.5rem; }
 
 .footer-list-icons {
     list-style: none;
     padding: 0;
-    margin-top: 10px;
+    margin-top: 0.62rem;
 }
-.footer-list-icons li { margin-bottom: 12px; }
+.footer-list-icons li { margin-bottom: 0.75rem; }
 
 .flex-link {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
 }
 .flex-link img { flex-shrink: 0; display: block; }
 
 .footer-sep {
     border: 0;
     border-top: 1px solid #454d55;
-    margin: 25px 0;
+    margin: 1.56rem 0;
 }
 
 .divider {
     width: 1px;
-    height: 12px;
+    height: 0.75rem;
     background-color: #454d55;
-    margin: 0 10px;
+    margin: 0 0.62rem;
 }
 
 .centered-section {
@@ -78,15 +78,15 @@
 .legal-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 1.87rem;
     list-style-type: square;
-    padding-left: 15px;
-    margin: 10px 0 0 0;
+    padding-left: 0.94rem;
+    margin: 0.625rem 0 0 0;
 }
 
 .social-links {
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-top: 15px;
+    gap: 1.56rem;
+    margin-top: 0.94rem;
 }

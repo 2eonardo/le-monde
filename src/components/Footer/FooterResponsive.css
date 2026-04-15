@@ -6,14 +6,14 @@
     .footer-column-special {
         grid-column: span 3;
         border-top: 1px solid #454d55;
-        padding-top: 25px;
-        margin-top: 10px;
+        padding-top: 1.56rem;
+        margin-top: 0.62rem;
     }
 
     .footer-special {
         display: flex;
         justify-content: flex-start;
-        gap: 80px;
+        gap: 5rem;
     }
 
     .footer-special .footer-sep {
@@ -28,9 +28,9 @@
     .legal-links, .social-links {
         display: grid;
         grid-template-columns: auto auto;
-        column-gap: 100px;
-        row-gap: 15px;
-        margin-top: 20px;
+        column-gap: 6.25rem;
+        row-gap: 0.94rem;
+        margin-top: 1.25rem;
     }
 }
 
@@ -44,7 +44,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 0;
+        padding: 0.94rem 0;
         margin: 0;
         border-bottom: 1px solid #454d55;
         cursor: pointer;
@@ -55,8 +55,8 @@
         font-size: 1.5rem;
         font-weight: 300;
         color: #fff;
-        width: 30px;
-        height: 30px;
+        width: 1.87rem;
+        height: 1.87rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -74,44 +74,44 @@
 
     .footer-special {
         flex-direction: column;
-        gap: 5px;
+        gap: 0.31rem;
     }
 
     .footer-special .footer-sep {
         display: block;
-        margin: 10px 0;
+        margin: 0.625rem 0;
     }
 
     .centered-section {
-        margin-top: 25px;
+        margin-top: 1.56rem;
     }
 }
 
 @media (max-width: 360px) {
     .main-footer {
-        font-size: 11px;
+        font-size: 0.68rem;
     }
 
     .legal-links {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 0.75rem;
     }
 
     .social-links {
         grid-template-columns: 1fr 1fr;
-        column-gap: 10px;
+        column-gap: 0.625rem;
     }
 
     .social-links a {
-        gap: 5px;
+        gap: 0.31rem;
         white-space: nowrap;
     }
 
     .footer-title {
-        font-size: 10px;
+        font-size: 0.625rem;
     }
 
     .footer-container {
-        padding: 0 10px;
+        padding: 0 0.62rem;
     }
 }

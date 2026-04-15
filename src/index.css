@@ -1,42 +1,19 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
+    /* Il telecomando che scala tutto il sito */
     font-size: clamp(13px, 0.8rem + 0.4vw, 16px);
+    overflow-x: hidden;
 }
 
 body {
-  margin: 0 ;
-  padding: 0 ;
-  width: 100%;
-  min-height: 100vh;
-  display: block;
-}
-
-#root {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-.main-header {
-     width: 100%;
-     margin: 0;
-     /* Altri tuoi stili... */
-   }
-
-html, body {
-    margin: 0;
-    padding: 0;
     width: 100%;
-    /* Impedisce al contenuto che "sborda" di creare la fascia bianca a destra */
+    min-height: 100vh;
     overflow-x: hidden;
     position: relative;
-}
-
-* {
-    box-sizing: border-box;
+    background-color: #fff;
 }

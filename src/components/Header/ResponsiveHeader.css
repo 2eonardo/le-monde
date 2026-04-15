@@ -22,7 +22,7 @@
         flex: 1;
         display: flex;
         justify-content: flex-start; /* Logo a sinistra */
-        margin-left: 100px; /* Spazio per il pulsante Menu assoluto */
+        margin-left: 6.25rem; /* Spazio per il pulsante Menu assoluto */
     }
 
     .center-header img {
@@ -33,10 +33,10 @@
        Lo prendiamo dalla barra nera e lo posizioniamo fisicamente a sinistra del logo */
     .nav-bar > button {
         position: absolute;
-        top: 20px; /* Allineato verticalmente al logo */
-        left: 25px;
+        top: 1.25rem; /* Allineato verticalmente al logo */
+        left: 1.56rem;
         flex-direction: row; /* Icona e testo affiancati */
-        padding: 5px;
+        padding: 0.31rem;
         margin: 0;
     }
 
@@ -57,7 +57,7 @@
     .tablet-button button img {
         height: 1rem ;
         width: auto;
-        margin: 0 0 5px 0;
+        margin: 0 0 0.31rem 0;
     }
 
     /* Testo minuscolo e molto grassetto */
@@ -74,7 +74,7 @@
     .menu-divider {
         height: 1.8rem ; /* Più corto per la barra sottile */
         flex-shrink: 0;
-        margin: 0 10px;
+        margin: 0 0.62rem;
     }
 }
 
@@ -86,7 +86,7 @@
     /* 2. RIDUCE LO SPAZIO: Diminuiamo il margine del logo
        perché l'icona da sola occupa molto meno spazio */
     .center-header {
-        margin-left: 3.125rem !important; /* Circa 50px invece dei 100px di prima */
+        margin-left: 3.12rem !important; /* Circa 50px invece dei 100px di prima */
     }
 
     /* 3. OPZIONALE: Avvicina l'icona al bordo sinistro se vuoi recuperare altro spazio */
@@ -95,6 +95,6 @@
     }
 
     .center-header img {
-        height: 2rem; /* Ridimensionato per tablet */
+        height: 2.2rem; /* Ridimensionato per tablet */
     }
 }

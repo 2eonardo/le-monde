@@ -1,5 +1,5 @@
 .live-news {
-    padding: 15px 0;
+    padding: 0.94rem 0;
     display: flex;
     background-color: #fff;
     border-bottom: 1px solid #eee;
@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 0 20px;
+    padding: 0 1.25rem;
     cursor: pointer;
     border-right: 1px solid #eee;
 }
@@ -18,12 +18,12 @@
 .news div {
     display: flex;
     align-items: baseline;
-    gap: 8px;
+    gap: 0.5rem;
     min-height: 1.2rem;
-    font-size: 0.75rem;
 }
 
 .news-time {
+    font-size: 0.75rem;
     font-weight: bold;
     color: #333;
     white-space: nowrap;
@@ -31,6 +31,7 @@
 
 .span-label {
     color: #bc0000;
+    font-size: 0.75rem;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -48,18 +49,17 @@
 }
 
 .button-div {
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 .live-news-button {
     background-color: transparent;
     border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 6px 15px;
+    border-radius: 1.25rem;
+    padding: 0.37rem 0.94rem;
     cursor: pointer;
     white-space: nowrap;
     transition: background 0.2s;
-    font-size: 0.85rem;
 }
 
 .live-news-button:hover {
