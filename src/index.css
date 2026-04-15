@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+    font-size: clamp(13px, 0.8rem + 0.4vw, 16px);
+}
+
 body {
   margin: 0 ;
   padding: 0 ;
