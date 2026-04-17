@@ -1,63 +1,88 @@
+/* ================================
+   1. NAVIGATION CONTAINER
+   ================================ */
 .nav-bar {
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: auto;
-    flex-shrink: 0;
+    height: 44px;
+    width: 100%;
     background-color: #000;
+    -webkit-mask-image: linear-gradient(to right, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, black 92%, transparent 100%);
 }
+
+/* ================================
+   2. BUTTONS & LINKS (General)
+   ================================ */
+.nav-button,
 .nav-bar button,
+.nav-bar label,
 .nav-bar a {
     display: flex;
     align-items: center;
+    justify-content: center; /* Aggiunto qui per fondere le due classi duplicate */
     background: transparent;
     border: none;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
-    padding: 0.5rem 0.5rem;
+    padding: 0.4rem 0.6rem;
     border-radius: 0.25rem;
     transition: background-color 0.2s;
 }
 
-.nav-bar > button {
-    flex-direction: row;
+.nav-button:hover{
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
-.nav-bar button span {
-    font-size: 0.85rem;
+.nav-bar button span,
+.nav-bar label span {
+    font-size: 0.8rem;
     font-weight: 700;
     margin-left: 0.5rem;
 }
 
-.nav-bar img{
-    height: 1.2rem;
+.nav-bar img {
+    height: 1rem;
     width: auto;
 }
 
+/* ================================
+   3. HORIZONTAL SCROLL LIST
+   ================================ */
 .nav-bar ul {
     display: flex;
     align-items: center;
     list-style: none;
-    position: sticky;
     margin: 0;
     padding: 0;
-    gap: 0;
 }
 
-.nav-bar ul li {
+.nav-link {
+    overflow-x: auto;
+    white-space: nowrap;
     display: flex;
     align-items: center;
+    scrollbar-width: none; /* Firefox */
 }
 
-.nav-bar ul li a {
+.nav-link::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.nav-link li {
+    flex-shrink: 0;
+}
+
+.nav-link li a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     font-weight: 700;
     padding: 0.3rem 0;
-    margin: 0 0.6rem;
+    margin: 0 0.3rem;
     white-space: nowrap;
     position: relative;
     border-bottom: 3px solid transparent;
@@ -70,44 +95,35 @@
     border-radius: 3px 2px 0 0;
 }
 
-.nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-
 .nav-highlight {
     font-family: "Times New Roman", Times, serif;
     font-weight: 700;
-    font-style: normal;
 }
 
-.menu-divider {
-    width: 1px;
-    height: 1.8rem;
-    background-color: #333;
-    margin: 0 0.3rem;
-}
-
+/* ================================
+   4. DIVIDERS & TABLET BUTTONS
+   ================================ */
+.menu-divider,
 .list-divider {
-    width: 2px;
-    height: 1.8rem;
     background-color: #333;
     margin: 0 0.3rem;
 }
 
-.tablet-button{
+.menu-divider { width: 1px; height: 1.4rem; }
+.list-divider { width: 2px; height: 1.4rem; }
+
+.tablet-button {
     display: none;
+    align-items: center;
+    justify-content: center;
 }
-.tablet-button button{
-    display: flex;
+
+.tablet-button button {
     flex-direction: column;
-
 }
 
-.tablet-button button span{
+.tablet-button button span {
     font-size: 0.65rem;
-    padding: 0.5em 0;
     margin: 0 0.6rem;
-    height: 0.5rem;
     white-space: nowrap;
 }

@@ -1,5 +1,5 @@
 .live-news {
-    padding: 0.94rem 0;
+    padding: 0.5rem 0;
     display: flex;
     background-color: #fff;
     border-bottom: 1px solid #eee;
@@ -22,8 +22,11 @@
     min-height: 1.2rem;
 }
 
-.news-time {
+.news-time, .span-label, .news a {
     font-size: 0.75rem;
+}
+
+.news-time {
     font-weight: bold;
     color: #333;
     white-space: nowrap;
@@ -31,7 +34,6 @@
 
 .span-label {
     color: #bc0000;
-    font-size: 0.75rem;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -39,7 +41,6 @@
 .news a {
     text-decoration: none;
     color: #1a1a1a;
-    font-size: 0.88rem;
     line-height: 1.4;
 }
 
@@ -48,20 +49,16 @@
     color: #000;
 }
 
-.button-div {
-    padding: 0 1.25rem;
-}
+.button-div { padding: 0 1.25rem; }
 
 .live-news-button {
     background-color: transparent;
     border: 1px solid #ccc;
     border-radius: 1.25rem;
-    padding: 0.37rem 0.94rem;
+    padding: 0.3rem 0.9rem;
     cursor: pointer;
     white-space: nowrap;
     transition: background 0.2s;
 }
 
-.live-news-button:hover {
-    background-color: #f9f9f9;
-}
+.live-news-button:hover { background-color: #f9f9f9; }

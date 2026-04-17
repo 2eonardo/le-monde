@@ -7,13 +7,19 @@
 html {
     /* Il telecomando che scala tutto il sito */
     font-size: clamp(13px, 0.8rem + 0.4vw, 16px);
-    overflow-x: hidden;
+
+    /* MODIFICA: overflow-x deve essere visibile o clip per non rompere lo sticky */
+    overflow-x: clip;
 }
 
 body {
     width: 100%;
     min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
     background-color: #fff;
+    overflow-x: visible;
+    position: static;
+}
+#root {
+    width: 100%;
+    overflow-x: clip;
 }

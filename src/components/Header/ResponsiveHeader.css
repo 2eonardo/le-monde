@@ -1,100 +1,105 @@
-@media (max-width: 1400px){
-    .nav-bar{
-        display:flex;
+/* ================================
+   MAX 1200px
+   ================================ */
+@media (max-width: 1200px) {
+    .nav-bar {
         justify-content: flex-start;
     }
 }
 
+/* ================================
+   MAX 1024px (TABLET)
+   ================================ */
 @media (max-width: 1024px) {
-
     .nav-bar {
         padding: 0.2rem 1rem !important;
     }
-    /* 1. SPARIZIONE ELEMENTI NON NECESSARI */
+
+    /* Nascondi elementi Desktop */
+    .nav-bar > button img,
+    .nav-bar label img,
     .upper-header .left-header,
-    .upper-header .language-switcher {
+    .upper-header .language-switcher,
+    .nav-bar > a,
+    .nav-bar > button,
+    .nav-bar label {
         display: none;
     }
 
-    /* 2. LOGO "LE MONDE" A SINISTRA
-       Usiamo flex-start e un margine per lasciare spazio al pulsante Menu */
+    /* Center Header Adjustments */
     .center-header {
         flex: 1;
         display: flex;
-        justify-content: flex-start; /* Logo a sinistra */
-        margin-left: 6.25rem; /* Spazio per il pulsante Menu assoluto */
+        justify-content: flex-start;
+        margin-left: 0.5rem;
     }
 
     .center-header img {
-        height: 2.5rem; /* Ridimensionato per tablet */
+        height: 1.8rem;
     }
 
-    /* 3. SPOSTAMENTO DEL TASTO MENU IN ALTO
-       Lo prendiamo dalla barra nera e lo posizioniamo fisicamente a sinistra del logo */
-    .nav-bar > button {
-        position: absolute;
-        top: 1.25rem; /* Allineato verticalmente al logo */
-        left: 1.56rem;
-        flex-direction: row; /* Icona e testo affiancati */
-        padding: 0.31rem;
-        margin: 0;
-    }
-
-    /* 4. SPARIZIONE ICONA CERCA (S) NELLA NAV BAR */
-    .nav-bar > a {
-        display: none;
-    }
-
-    .tablet-button{
+    /* Menu Button Layout */
+    .menu-button {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 0.5rem;
     }
 
-    /* 6. RESA GRAFICA BOTTONI TABLET (V e E) */
-
-    /* Icone molto piccole come nell'originale */
-    .tablet-button button img {
-        height: 1rem ;
-        width: auto;
-        margin: 0 0 0.31rem 0;
-    }
-
-    /* Testo minuscolo e molto grassetto */
+    .menu-button button span,
+    .menu-button label span,
     .tablet-button button span {
-        font-size: 0.65rem;
-        font-weight: 700;
+        font-size: 0.65rem !important;
+        font-weight: 700 !important;
         line-height: 1 !important;
-        margin: 0;
-        padding: 0;
-        height: auto;
+        margin: 0 !important;
     }
 
-    /* 7. NON FAR SCOMPARIRE IL DIVISORE */
+    /* Sostituzione Icone tramite pseudo-elementi */
+    .nav-button::before {
+        content: "";
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+        background: url('https://placehold.co/40x40/666666/ffffff?text=MS') no-repeat center;
+        background-size: contain;
+    }
+
+    .nav-button img {
+        display: none;
+    }
+
+    /* Tablet Buttons & Dividers */
+    .tablet-button {
+        display: flex;
+    }
+
+    .tablet-button button img {
+        height: 1rem;
+        margin-bottom: 0.31rem;
+    }
+
     .menu-divider {
-        height: 1.8rem ; /* Più corto per la barra sottile */
+        height: 1.8rem;
         flex-shrink: 0;
         margin: 0 0.62rem;
     }
 }
 
-@media (max-width: 767px){
+/* ================================
+   MAX 767px (MOBILE)
+   ================================ */
+@media (max-width: 767px) {
+    .nav-button span,
     .nav-bar > .nav-button > span {
         display: none;
     }
 
-    /* 2. RIDUCE LO SPAZIO: Diminuiamo il margine del logo
-       perché l'icona da sola occupa molto meno spazio */
-    .center-header {
-        margin-left: 3.12rem !important; /* Circa 50px invece dei 100px di prima */
-    }
-
-    /* 3. OPZIONALE: Avvicina l'icona al bordo sinistro se vuoi recuperare altro spazio */
-    .nav-bar > button {
-        left: 1rem !important; /* Circa 16px dal bordo sinistro */
-    }
-
     .center-header img {
-        height: 2.2rem; /* Ridimensionato per tablet */
+        height: 1.5rem;
+    }
+
+    .menu-button {
+        margin-left: 0.1rem;
     }
 }
