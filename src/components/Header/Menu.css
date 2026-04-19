@@ -1,0 +1,131 @@
+.sr-only {
+    position: absolute;
+    left: -10000px; /* Lo sposta lontano */
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    font-size: 16px; /* Evita l'errore WAVE "testo troppo piccolo" */
+}
+:root:has(#menu-toggle:checked) {
+    overflow: hidden !important;
+}
+
+:root:has(#menu-toggle:checked) body {
+    overflow: hidden !important;
+    height: 100vh !important;
+    scrollbar-gutter: stable;
+}
+.menu-drawer ul, .list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ---- MOTORE PRINCIPALE (0 JS) ---- */
+.menu-checkbox, .accordion-checkbox, .voir-plus-checkbox { display: none; }
+
+.menu-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-drawer {
+    position: fixed;
+    top: 0; left: 0; height: 100%;
+    width: 380px;
+    max-width: 90vw;
+    background-color: #ffffff;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+#menu-toggle:checked ~ .menu-overlay { opacity: 1; visibility: visible; }
+#menu-toggle:checked ~ .menu-drawer { transform: translateX(0); }
+
+/* ---- HEADER ---- */
+.menu-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 6px;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+}
+
+.close-btn {
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+}
+
+/* LINGUA (Pixel conversion) */
+.language-switcher-menu { display: flex; margin-left: auto; align-items: center; margin-right: 8px; }
+.language-switcher-menu a { font-size: 12px; font-weight: 500; padding: 6px; border-radius: 4px; transition: background-color 0.2s; }
+.divider-language-menu { width: 1px; height: 14px; background-color:  #686868; margin: 0 2px; }
+.selected-language-menu { color: #201e1e; text-decoration: underline; }
+.unselected-language-menu { color: #686868; text-decoration: none; }
+.language-switcher-menu a:hover { background-color: #f3f4f6; }
+
+/* ---- SEARCH BAR ---- */
+.search-container { padding: 16px; background-color: #f9fafb; display: flex; gap: 12px; }
+.search-input { flex-grow: 1; padding: 10px 12px; border: 1px solid #9ca3af; border-radius: 2px; outline: none; font-size: 14px; color: #374151; }
+.search-button { padding: 0 16px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 2px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+
+/* ---- QUICK LINKS E VOIR PLUS ---- */
+.quick-links { padding: 16px 0; border-bottom: 1px solid #e5e7eb; display: flex; flex-direction: column; }
+.quick-link { display: flex; align-items: center; padding: 8px 15px; gap: 12px; text-decoration: none; color: #1f2937; font-size: 15px; margin: 5px; transition: background-color 0.2s; }
+.quick-link:hover { background-color: #f9fafb; }
+.voir-plus-label:hover {text-decoration: underline}
+
+.voir-plus-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; display: flex; flex-direction: column; }
+.voir-plus-label { cursor: pointer; color: #2563eb; font-size: 14px; display: flex; align-items: center; padding: 15px 15px; }
+.text-plus, .text-moins { display: flex; align-items: center; gap: 6px; }
+.text-moins { display: none; }
+
+.voir-plus-checkbox:checked ~ .voir-plus-content { max-height: 500px; }
+.voir-plus-checkbox:checked ~ .voir-plus-label .text-plus { display: none; }
+.voir-plus-checkbox:checked ~ .voir-plus-label .text-moins { display: flex; }
+
+/* ---- ACCORDION ---- */
+.accordion { padding: 15px 0; }
+.accordion-item { margin-bottom: 5px; font-size: 15px; }
+.accordion-label { display: flex; justify-content: space-between; align-items: center; padding: 16px; background: white; cursor: pointer; font-weight: bold; color: #111827; }
+.accordion-label:hover { background-color: #f9fafb; }
+.accordion-icon { transition: transform 0.2s ease; }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; background: white; }
+.accordion-content a { display: block; padding: 10px 20px; text-decoration: none; color: #374151; font-size: 14px; margin: 5px; }
+.accordion-content a:hover { background-color: #f9fafb;}
+
+.accordion-checkbox:checked + .accordion-label .accordion-icon { transform: rotate(180deg); }
+.accordion-checkbox:checked + .accordion-label + .accordion-content { max-height: 800px; }
+
+/* ---- SEZIONI ---- */
+.section-title { background-color: #f3f4f6; padding: 12px 16px; font-size: 14px; }
+.article-title { background-color: #f1f1f1; padding: 12px 16px; color: #5f6061; font-size: 14px; }
+
+.section-link, .grey-link { display: flex; justify-content: space-between; align-items: center; padding: 6px 16px; margin: 6px 0; text-decoration: none; color: #1f2937; font-size: 15px; transition: background-color 0.2s; }
+.section-link:hover, .grey-link:hover { background-color: #f3f4f6; }
+.grey-area { background-color: #fbfbfb; padding-bottom: 15px; }
+
+/* ---- ICONE E PLACEHOLDERS ---- */
+.icon-ph { width: 20px; height: 20px; border-radius: 2px; }
+.logo-ph { height: 35px; width: auto; border-radius: 2px; }
+.icon-search { width: 16px; height: 16px; }

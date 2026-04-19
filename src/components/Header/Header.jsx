@@ -40,9 +40,9 @@ const RightHeader = () => (
 );
 
 const MenuButton = () => (
-    <label htmlFor="menu-toggle" className="nav-button" role="button" aria-expanded="false" aria-label="Open menu">
+    <label htmlFor="menu-toggle" className="nav-button"  role="button" aria-hidden="true">
         <img src="https://placehold.co/40x40/666666/ffffff?text=M" alt="" aria-hidden="true" />
-        <span>Menu</span>
+        <span id="menu-button-label">Menu</span>
     </label>
 )
 
@@ -56,14 +56,14 @@ export default function Header() {
                         <img src="https://placehold.co/40x40/666666/ffffff?text=J" alt="" aria-hidden="true" />
                         <span>Le journal</span>
                     </a>
-                    <label htmlFor="services-toggle" role="button" aria-label="Open services">
+                    <label htmlFor="services-toggle" aria-label="Open services">
                         <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
                         <span>Services</span>
                     </label>
                 </div>
                 {/* Sezione a comparsa max-width 1024px:*/}
                 <div className="menu-button">
-                    <MenuButton />
+                    <MenuButton/>
                 </div>
                 {/* CENTRO: Logo principale */}
                 <div className="center-header">
@@ -76,7 +76,7 @@ export default function Header() {
             </div>
             {/* Barra di navigazione principale */}
             <nav className="nav-bar" aria-label="Main navigation">
-                <MenuButton />
+                <MenuButton/>
                 <a href="/search" className="nav-button" aria-label="Search">
                     <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
                 </a>
