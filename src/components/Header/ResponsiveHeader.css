@@ -1,7 +1,7 @@
 /* ================================
    MAX 1200px
    ================================ */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .nav-bar {
         justify-content: flex-start;
     }
@@ -35,7 +35,7 @@
     }
 
     .center-header img {
-        height: 1.8rem;
+        height: 2rem;
     }
 
     /* Menu Button Layout */
@@ -43,13 +43,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 0.5rem;
+        margin-left: 0;
     }
 
     .menu-button button span,
     .menu-button label span,
     .tablet-button button span {
-        font-size: 0.65rem !important;
+        font-size: 0.7rem !important;
         font-weight: 700 !important;
         line-height: 1 !important;
         margin: 0 !important;
@@ -59,8 +59,9 @@
     .nav-button::before {
         content: "";
         display: inline-block;
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 2px;
         background: url('https://placehold.co/40x40/666666/ffffff?text=MS') no-repeat center;
         background-size: contain;
     }
@@ -75,12 +76,11 @@
     }
 
     .tablet-button button img {
-        height: 1rem;
-        margin-bottom: 0.31rem;
+        height: 1.2rem;
+        margin-bottom: 0.3rem;
     }
 
     .menu-divider {
-        height: 1.8rem;
         flex-shrink: 0;
         margin: 0 0.62rem;
     }
@@ -95,8 +95,12 @@
         display: none;
     }
 
+    .nav-button{
+       padding-left:0;
+    }
+
     .center-header img {
-        height: 1.5rem;
+        height: 1.8rem;
     }
 
     .menu-button {

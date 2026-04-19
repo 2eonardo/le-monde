@@ -1,7 +1,8 @@
 import React from 'react';
 import './UpperHeader.css';
-import './NavBar.css'
-import './ResponsiveHeader.css'
+import './NavBar.css';
+import './ResponsiveHeader.css';
+import Menu from './Menu';
 
 const NavList = () =>(
     <ul className="nav-link">
@@ -39,7 +40,7 @@ const RightHeader = () => (
 );
 
 const MenuButton = () => (
-    <label htmlFor="menu-toggle" className="nav-button" aria-expanded="false" aria-label="Open menu">
+    <label htmlFor="menu-toggle" className="nav-button" role="button" aria-expanded="false" aria-label="Open menu">
         <img src="https://placehold.co/40x40/666666/ffffff?text=M" alt="" aria-hidden="true" />
         <span>Menu</span>
     </label>
@@ -49,59 +50,52 @@ export default function Header() {
     return (
         <header className="main-header" role="banner">
             <div className="upper-header">
-                    {/* SINISTRA: Journal e Services */}
-                    <div className="left-header">
-                        <a href="/newspaper" aria-label=" Digital newspaper">
-                            <img src="https://placehold.co/40x40/666666/ffffff?text=J" alt="" aria-hidden="true" />
-                            <span>Le journal</span>
-                        </a>
-                        <button type="button" aria-label="Open services">
-                            <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
-                            <span>Services</span>
-                        </button>
-
-                    </div>
+                {/* SINISTRA: Journal e Services */}
+                <div className="left-header">
+                    <a href="/newspaper" aria-label=" Digital newspaper">
+                        <img src="https://placehold.co/40x40/666666/ffffff?text=J" alt="" aria-hidden="true" />
+                        <span>Le journal</span>
+                    </a>
+                    <label htmlFor="services-toggle" role="button" aria-label="Open services">
+                        <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
+                        <span>Services</span>
+                    </label>
+                </div>
+                {/* Sezione a comparsa max-width 1024px:*/}
                 <div className="menu-button">
                     <MenuButton />
                 </div>
-                    {/* CENTRO: Logo principale */}
-                    <div className="center-header">
-                        <a href="/homepage" aria-label="Le Monde - Back to the homepage">
-                            <img src="https://placehold.co/600x120/666666/ffffff?text=Le+Monde" alt=""/>
-                        </a>
-                    </div>
-
-
-                    {/* DESTRA: Lingua e Abbonamento */}
-                    <RightHeader />
-
+                {/* CENTRO: Logo principale */}
+                <div className="center-header">
+                    <a href="/homepage" aria-label="Le Monde - Back to the homepage">
+                        <img src="https://placehold.co/600x120/666666/ffffff?text=Le+Monde" alt=""/>
+                    </a>
+                </div>
+                {/* DESTRA: Lingua e Abbonamento */}
+                <RightHeader />
             </div>
-
             {/* Barra di navigazione principale */}
             <nav className="nav-bar" aria-label="Main navigation">
-                    <MenuButton />
-
-                    <a href="/search" className="nav-button" aria-label="Search">
-                        <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
-                    </a>
-
-                    {/* Sezione a comparsa max-width 1024px:*/}
-                    <div className="tablet-button">
-                        <button>
-                            <img src="https://placehold.co/40x40/666666/ffffff?text=V" alt="" aria-hidden="true" />
-                            <span>Videò</span>
-                        </button>
-                        <button>
-                            <img src="https://placehold.co/40x40/666666/ffffff?text=E" alt="" aria-hidden="true" />
-                            <span>En continu</span>
-                        </button>
-                    </div>
-
-                    <div className="menu-divider" aria-hidden="true"></div>
-
-                    <NavList />
-
+                <MenuButton />
+                <a href="/search" className="nav-button" aria-label="Search">
+                    <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
+                </a>
+                {/* Sezione a comparsa max-width 1024px:*/}
+                <div className="tablet-button">
+                    <button>
+                        <img src="https://placehold.co/40x40/666666/ffffff?text=V" alt="" aria-hidden="true" />
+                        <span>Videò</span>
+                    </button>
+                    <button>
+                        <img src="https://placehold.co/40x40/666666/ffffff?text=E" alt="" aria-hidden="true" />
+                        <span>En continu</span>
+                    </button>
+                </div>
+                <div className="menu-divider" aria-hidden="true"></div>
+                <NavList />
             </nav>
+
+            <Menu />
         </header>
     );
 }
