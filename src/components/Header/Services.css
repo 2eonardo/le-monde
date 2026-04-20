@@ -1,0 +1,138 @@
+html:has(#services-toggle:checked),
+body:has(#services-toggle:checked) {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.services-checkbox {
+    display: none;
+}
+
+/* 2. OVERLAY (Contenitore Fisso) */
+.services-overlay {
+    display: none;
+    position: fixed;
+    top: 5.1rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 99999;
+    overflow-y: auto;
+    overscroll-behavior: contain
+}
+
+.services-checkbox:checked ~ .services-overlay {
+    display: block;
+}
+
+/* 3. CONTAINER (Gestisce ora sia lo scroll che la centratura) */
+.services-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 3rem 2rem 3rem;
+}
+
+/* 4. TASTO CHIUDI */
+.services-close-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+.services-close-label {
+    cursor: pointer;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.services-close-label:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+/* Focus per accessibilità tastiera */
+.services-close-label:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+/* 5. STRUTTURA GRID */
+.services-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0;
+    row-gap: 5rem;
+}
+
+/* 6. SEZIONI E LINEE VERTICALI */
+.services-section {
+    padding: 0 4rem;
+}
+
+.services-section:nth-child(even) {
+    border-left: 1px solid #dcdcdc;
+}
+
+/* 7. TITOLI */
+.services-title {
+    font-family: "Arial Narrow", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05rem;
+    color: #333;
+}
+
+/* 8. SOTTOGRIGLIA LINK */
+.services-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.services-subgrid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-subgrid li {
+    margin-bottom: 1.2rem;
+}
+
+/* Stile per i link <a> per mantenere il look originale */
+.services-subgrid li a {
+    text-decoration: none;
+    color: #333;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    display: inline-block;
+    width: 100%;
+    transition: opacity 0.2s;
+}
+
+.services-subgrid li a:hover {
+    opacity: 0.5;
+}
+
+/* Fondamentale per WAVE: focus visibile */
+.services-subgrid li a:focus {
+    outline: 2px solid #000;
+    outline-offset: 4px;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .services-main-grid { grid-template-columns: 1fr; row-gap: 3rem; }
+    .services-section:nth-child(even) { border-left: none; padding-left: 0; }
+    .services-section { padding: 0 1rem; }
+}

@@ -3,6 +3,7 @@ import './UpperHeader.css';
 import './NavBar.css';
 import './ResponsiveHeader.css';
 import Menu from './Menu';
+import Services from './Services';
 
 const NavList = () =>(
     <ul className="nav-link">
@@ -56,9 +57,9 @@ export default function Header() {
                         <img src="https://placehold.co/40x40/666666/ffffff?text=J" alt="" aria-hidden="true" />
                         <span>Le journal</span>
                     </a>
-                    <label htmlFor="services-toggle" aria-label="Open services">
+                    <label htmlFor="services-toggle" aria-label="Open services" role="button" aria-hidden="true">
                         <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
-                        <span>Services</span>
+                        <span id="services-button-label">Services</span>
                     </label>
                 </div>
                 {/* Sezione a comparsa max-width 1024px:*/}
@@ -94,7 +95,7 @@ export default function Header() {
                 <div className="menu-divider" aria-hidden="true"></div>
                 <NavList />
             </nav>
-
+            <Services />
             <Menu />
         </header>
     );
