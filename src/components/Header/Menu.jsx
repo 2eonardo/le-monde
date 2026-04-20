@@ -5,18 +5,17 @@ const Menu = () => {
     return (
         <nav aria-label="Menu laterale Le Monde">
             <input type="checkbox" id="menu-toggle" className="menu-checkbox" aria-labelledby="menu-button-label" tabIndex="-1" />
-            <label htmlFor="menu-toggle" className="menu-overlay" role="button" aria-hidden="true"><span className="sr-only">Close Menu</span> </label>
+            <label htmlFor="menu-toggle" className="menu-overlay" role="button"><span className="sr-only">Close Menu</span> </label>
 
-            <div className="menu-drawer" role="dialog" aria-modal="true">
+            <div className="menu-drawer" role="dialog" aria-modal="true" aria-labelledby="menu-button-label">
                 {/* Header */}
                 <div className="menu-header">
-                    <label htmlFor="menu-toggle" className="close-btn" role="button" aria-hidden="true">
+                    <label htmlFor="menu-toggle" className="close-btn" role="button" tabIndex="0">
                         <span className="sr-only">Close menu</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M18 6L6 18M6 6L18 18" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </label>
-
                     <a href="/homepage" aria-label="Le Monde - Torna alla homepage">
                         <img src="https://placehold.co/120x30/666666/ffffff?text=Le+Monde" alt="Logo Le Monde" className="logo-ph" />
                     </a>
@@ -30,13 +29,14 @@ const Menu = () => {
 
                 {/* Cerca */}
                 <div className="search-container" role="search">
+                    <label htmlFor="menu-search-input" className="sr-only">Rechercher sur Le Monde</label>
                     <input
+                        id="menu-search-input"
                         type="text"
                         placeholder="Rechercher sur Le Monde"
                         className="search-input"
-                        aria-label="Cerca nel sito"
                     />
-                    <button className="search-button" aria-label="Invia ricerca">
+                    <button className="search-button" aria-label="Search">
                         <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" className="icon-search"/>
                     </button>
                 </div>
@@ -58,7 +58,7 @@ const Menu = () => {
                             <a href="/Pape" className="quick-link"><img src="https://placehold.co/40x40/666666/ffffff?text=P" alt="" aria-hidden="true" className="icon-ph" /> Pape</a>
                             <a href="/En-direct" className="quick-link"><img src="https://placehold.co/40x40/666666/ffffff?text=E" alt="" aria-hidden="true" className="icon-ph" /> En direct</a>
                         </div>
-                        <label htmlFor="voir-plus-toggle" className="voir-plus-label" role="button" aria-expanded="false">
+                        <label htmlFor="voir-plus-toggle" className="voir-plus-label" role="button" tabIndex="0">
                             <span className="text-plus">Voir plus <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
                             <span className="text-moins">Voir moins <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M10 8L6 4L2 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
                         </label>
@@ -67,12 +67,14 @@ const Menu = () => {
 
                 {/* ACCORDION */}
                 <div className="accordion">
-                    <div className="accordion-item">
+                    <div>
                         <input type="checkbox" id="acc-inter" className="accordion-checkbox" aria-hidden="true" tabIndex="-1" />
-                        <label htmlFor="acc-inter" className="accordion-label" role="button" aria-expanded="false">
-                            International
-                            <svg className="accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                        </label>
+                        <h3>
+                            <label htmlFor="acc-inter" className="accordion-label" role="button" tabIndex="0">
+                                International
+                                <svg className="accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                            </label>
+                        </h3>
                         <div className="accordion-content">
                             <div className="accordion-content-inner">
                                 <a href="/Europe">Europe</a>
@@ -83,12 +85,14 @@ const Menu = () => {
                         </div>
                     </div>
 
-                    <div className="accordion-item">
+                    <div>
                         <input type="checkbox" id="acc-planete" className="accordion-checkbox" aria-hidden="true" tabIndex="-1" />
-                        <label htmlFor="acc-planete" className="accordion-label" role="button" aria-expanded="false">
-                            Planète
-                            <svg className="accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                        </label>
+                            <h3>
+                                <label htmlFor="acc-planete" className="accordion-label" role="button" tabIndex="0">
+                                    Planète
+                                    <svg className="accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                                </label>
+                            </h3>
                         <div className="accordion-content">
                             <div className="accordion-content-inner">
                                 <a href="/Planete-tous-les-articles">Planète : tous les articles</a>
@@ -99,12 +103,14 @@ const Menu = () => {
                         </div>
                     </div>
 
-                    <div className="accordion-item">
+                    <div>
                         <input type="checkbox" id="acc-politique" className="accordion-checkbox" aria-hidden="true" tabIndex="-1" />
-                        <label htmlFor="acc-politique" className="accordion-label" role="button" aria-expanded="false">
-                            Politique
-                            <svg className="accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                        </label>
+                            <h3>
+                                <label htmlFor="acc-politique" className="accordion-label" role="button" tabIndex="0">
+                                    Politique
+                                    <svg className="accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                                </label>
+                            </h3>
                         <div className="accordion-content">
                             <div className="accordion-content-inner">
                                 <a href="/Gouvernement">L'exécutif</a>
@@ -114,27 +120,27 @@ const Menu = () => {
                     </div>
                 </div>
 
-                <div className="section-title">Autres formats</div>
+                <h2 className="section-title">Autres formats</h2>
                 <ul className="list-reset">
                     <li><a href="/Videos" className="grey-link">Vidéos</a></li>
                     <li><a href="/Podcasts" className="grey-link">Podcasts</a></li>
                     <li><a href="/Newsletters" className="grey-link">Newsletters</a></li>
                 </ul>
 
-                <div className="section-title">Les applications du Monde</div>
+                <h2 className="section-title">Les applications du Monde</h2>
                 <ul className="list-reset">
                     <li><a href="/Actualites-en-direct" className="section-link">Actualités en direct <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
                     <li><a href="/Le-journal" className="section-link">Le journal <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 8.5L8.5 3.5M8.5 3.5H4.5M8.5 3.5V7.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg></a></li>
                 </ul>
 
                 <div className="grey-area">
-                    <div className="article-title">1- Services Le Monde</div>
+                    <h3 className="article-title">1- Services Le Monde</h3>
                     <ul className="list-reset">
                         <li><a href="/Boutique" className="grey-link">Boutique Le Monde</a></li>
                         <li><a href="/Ateliers" className="grey-link">Les ateliers du Monde</a></li>
                     </ul>
 
-                    <div className="article-title">2- Services partenaires</div>
+                    <h3 className="article-title">2- Services partenaires</h3>
                     <ul className="list-reset">
                         <li><a href="/Calculateur" className="grey-link">Calculateur d'empreinte</a></li>
                         <li><a href="/Mahjong" className="grey-link">Mahjong gratuit</a></li>

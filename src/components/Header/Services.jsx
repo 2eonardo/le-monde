@@ -27,16 +27,16 @@ const Services = () => {
                             <h2 className="services-title">1- LOREM IPSUM DOLOR</h2>
                             <div className="services-subgrid">
                                 <ul>
-                                    <li><a href="#link">Lorem Ipsum</a></li>
-                                    <li><a href="#link">Dolor Sit Amet</a></li>
-                                    <li><a href="#link">Consectetur</a></li>
-                                    <li><a href="#link">Adipiscing Elit</a></li>
+                                    <li><a href="/Lorem Ipsum">Lorem Ipsum</a></li>
+                                    <li><a href="/Dolor Sit Amet">Dolor Sit Amet</a></li>
+                                    <li><a href="/Consectetur">Consectetur</a></li>
+                                    <li><a href="/Adipiscing Elit">Adipiscing Elit</a></li>
                                 </ul>
                                 <ul>
-                                    <li><a href="#link">Sed Do Eiusmod</a></li>
-                                    <li><a href="#link">Tempor Incidid</a></li>
-                                    <li><a href="#link">Ut Labore Et</a></li>
-                                    <li><a href="#link">Dolore Magna</a></li>
+                                    <li><a href="/Sed Do Eiusmod">Sed Do Eiusmod</a></li>
+                                    <li><a href="/Tempor Incidid">Tempor Incidid</a></li>
+                                    <li><a href="/Ut Labore Et">Ut Labore Et</a></li>
+                                    <li><a href="/Dolore Magna">Dolore Magna</a></li>
                                 </ul>
                             </div>
                         </section>
@@ -46,16 +46,16 @@ const Services = () => {
                             <h2 className="services-title">2- CONSECTETUR ADIPIS</h2>
                             <div className="services-subgrid">
                                 <ul>
-                                    <li><a href="#link">Minim Veniam</a></li>
-                                    <li><a href="#link">Quis Nostrud</a></li>
-                                    <li><a href="#link">Exercitation</a></li>
-                                    <li><a href="#link">Ullamco Laboris</a></li>
+                                    <li><a href="/Minim Veniam">Minim Veniam</a></li>
+                                    <li><a href="/Quis Nostrud">Quis Nostrud</a></li>
+                                    <li><a href="/Exercitation">Exercitation</a></li>
+                                    <li><a href="/Ullamco Laboris">Ullamco Laboris</a></li>
                                 </ul>
                                 <ul>
-                                    <li><a href="#link">Nisi Ut Aliquip</a></li>
-                                    <li><a href="#link">Ex Ea Commodo</a></li>
-                                    <li><a href="#link">Duis Aute Irure</a></li>
-                                    <li><a href="#link">Dolor In Repre</a></li>
+                                    <li><a href="/Nisi Ut Aliquip">Nisi Ut Aliquip</a></li>
+                                    <li><a href="/Ex Ea Commodo">Ex Ea Commodo</a></li>
+                                    <li><a href="/Duis Aute Irure">Duis Aute Irure</a></li>
+                                    <li><a href="/Dolor In Repre">Dolor In Repre</a></li>
                                 </ul>
                             </div>
                         </section>
@@ -65,16 +65,16 @@ const Services = () => {
                             <h2 className="services-title">3- GUIDES ET MAGNA</h2>
                             <div className="services-subgrid">
                                 <ul>
-                                    <li><a href="#link">Voluptate Velit</a></li>
-                                    <li><a href="#link">Esse Cillum</a></li>
-                                    <li><a href="#link">Eu Fugiat Nulla</a></li>
-                                    <li><a href="#link">Excepteur Sint</a></li>
+                                    <li><a href="/Voluptate Velit">Voluptate Velit</a></li>
+                                    <li><a href="/Esse Cillum">Esse Cillum</a></li>
+                                    <li><a href="/Eu Fugiat Nulla">Eu Fugiat Nulla</a></li>
+                                    <li><a href="/xcepteur Sint<">Excepteur Sint</a></li>
                                 </ul>
                                 <ul>
-                                    <li><a href="#link">Occaecat Cupid</a></li>
-                                    <li><a href="#link">Non Proident</a></li>
-                                    <li><a href="#link">Sunt In Culpa</a></li>
-                                    <li><a href="#link">Qui Officia</a></li>
+                                    <li><a href="/Occaecat Cupid">Occaecat Cupid</a></li>
+                                    <li><a href="/Non Proident">Non Proident</a></li>
+                                    <li><a href="/Sunt In Culpa">Sunt In Culpa</a></li>
+                                    <li><a href="/Qui Officia">Qui Officia</a></li>
                                 </ul>
                             </div>
                         </section>
@@ -84,14 +84,14 @@ const Services = () => {
                             <h2 className="services-title">4- SUPPLEMENTS LOREM</h2>
                             <div className="services-subgrid">
                                 <ul>
-                                    <li><a href="#link">Deserunt Mollit</a></li>
-                                    <li><a href="#link">Anim Id Est</a></li>
-                                    <li><a href="#link">Laborum Et Dol</a></li>
+                                    <li><a href="/Deserunt Mollit">Deserunt Mollit</a></li>
+                                    <li><a href="/Anim Id Est">Anim Id Est</a></li>
+                                    <li><a href="/Laborum Et Dol">Laborum Et Dol</a></li>
                                 </ul>
                                 <ul>
-                                    <li><a href="#link">Harum Quidem</a></li>
-                                    <li><a href="#link">Facilis Est Et</a></li>
-                                    <li><a href="#link">Expedita Dist</a></li>
+                                    <li><a href="/Harum Quidem">Harum Quidem</a></li>
+                                    <li><a href="/Facilis Est Et">Facilis Est Et</a></li>
+                                    <li><a href="/Expedita Dist">Expedita Dist</a></li>
                                 </ul>
                             </div>
                         </section>

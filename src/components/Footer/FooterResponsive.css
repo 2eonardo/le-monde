@@ -31,7 +31,6 @@
         gap: 0;
     }
 
-    /* Reset link legali e social per mobile */
     .legal-links, .social-links {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -40,7 +39,6 @@
         margin-top: 1.5rem;
     }
 
-    /* 1. IL TITOLO (H2): Diventa il contenitore della riga */
     .footer-column .footer-title {
         display: block;
         margin: 0;
@@ -48,21 +46,18 @@
         border-bottom: 1px solid #454d55;
     }
 
-    /* 2. LA LABEL (L'area di click totale) */
-    /* La rendiamo flex così il testo sta a sinistra e il simbolo (+) a destra */
     .footer-label-trigger {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 1rem 0; /* Area di click verticale comoda */
+        padding: 1rem 0;
         cursor: pointer;
         font-size: 0.75rem;
         font-weight: 700;
         text-transform: uppercase;
     }
 
-    /* 3. IL SIMBOLO + (Creato dentro la label così è cliccabile) */
     .footer-label-trigger::after {
         content: "+";
         font-size: 1.3rem;
@@ -72,27 +67,22 @@
         text-align: right;
     }
 
-    /* 4. LE LISTE: Nascoste di default in mobile */
     .footer-column .footer-list,
     .footer-column .footer-list-icons {
-        display: none; /* Inizialmente chiuse */
+        display: none;
         padding: 1rem 0 1rem 1rem;
         margin: 0;
     }
 
-    /* 5. LOGICA DI APERTURA (Checkbox Hack) */
-    /* Se la checkbox è selezionata, mostra la lista sorella (ul) */
     .footer-toggle:checked ~ .footer-list,
     .footer-toggle:checked ~ .footer-list-icons {
         display: block !important;
     }
 
-    /* Se la checkbox è selezionata, cambia il simbolo + in - nella label figlia dell'H2 */
     .footer-toggle:checked ~ .footer-title .footer-label-trigger::after {
         content: "−"; /* Segno meno */
     }
 
-    /* Gestione colonna Special (Newsletter e App) */
     .footer-column-special {
         grid-column: span 1;
         margin-top: 0;

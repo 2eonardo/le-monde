@@ -41,7 +41,7 @@ const RightHeader = () => (
 );
 
 const MenuButton = () => (
-    <label htmlFor="menu-toggle" className="nav-button"  role="button" aria-hidden="true">
+    <label htmlFor="menu-toggle" className="nav-button"  role="button" tabIndex="0">
         <img src="https://placehold.co/40x40/666666/ffffff?text=M" alt="" aria-hidden="true" />
         <span id="menu-button-label">Menu</span>
     </label>
@@ -57,7 +57,7 @@ export default function Header() {
                         <img src="https://placehold.co/40x40/666666/ffffff?text=J" alt="" aria-hidden="true" />
                         <span>Le journal</span>
                     </a>
-                    <label htmlFor="services-toggle" aria-label="Open services" role="button" aria-hidden="true">
+                    <label htmlFor="services-toggle" role="button" tabIndex="0">
                         <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
                         <span id="services-button-label">Services</span>
                     </label>
