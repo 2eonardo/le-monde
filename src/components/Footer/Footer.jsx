@@ -12,7 +12,10 @@ export default function Footer() {
 
                     {/* -- Services & Guides -- */}
                     <section className="footer-column">
-                        <h2 className="footer-title">LOREM IPSUM SERVICES</h2>
+                        <input type="checkbox" id="check-services" className="footer-toggle" />
+                        <h2 className="footer-title">
+                            <label htmlFor="check-services" className="footer-label-trigger" role="button">LOREM IPSUM SERVICES</label>
+                        </h2>
                         <ul className="footer-list">
                             <li><a href="/lorem-ipsum-dolor">Lorem ipsum dolor</a></li>
                             <li><a href="/sit-amet-consectetur">Sit amet consectetur</a></li>
@@ -22,7 +25,10 @@ export default function Footer() {
                             <li><a href="/dolore-magna-aliqua">Dolore magna aliqua</a></li>
                         </ul>
 
-                        <h2 className="footer-title second-title">LOREM GUIDES</h2>
+                        <input type="checkbox" id="check-guides" className="footer-toggle" />
+                        <h2 className="footer-title second-title">
+                            <label htmlFor="check-guides" className="footer-label-trigger" role="button">LOREM GUIDES</label>
+                        </h2>
                         <ul className="footer-list">
                             <li><a href="/minim-veniam-quis">Minim veniam quis</a></li>
                             <li><a href="/nostrud-exercitation">Nostrud exercitation</a></li>
@@ -33,7 +39,10 @@ export default function Footer() {
                     </section>
 
                     <section className="footer-column">
-                        <h2 className="footer-title">LOREM INTERNATIONAL</h2>
+                        <input type="checkbox" id="check-internetional" className="footer-toggle" />
+                        <h2 className="footer-title">
+                            <label htmlFor="check-internetional" className="footer-label-trigger" role="button">LOREM INTERNATIONAL</label>
+                        </h2>
                         <ul className="footer-list">
                             <li><a href="/duis-aute-irure">Duis aute irure</a></li>
                             <li><a href="/dolor-in-reprehenderit">Dolor in reprehenderit</a></li>
@@ -43,8 +52,10 @@ export default function Footer() {
                             <li><a href="/excepteur-sint">Excepteur sint</a></li>
                             <li><a href="/occaecat-cupidatat">Occaecat cupidatat</a></li>
                         </ul>
-
-                        <h2 className="footer-title second-title">LOREM PARTNERS</h2>
+                        <input type="checkbox" id="check-partners" className="footer-toggle" />
+                        <h2 className="footer-title second-title">
+                            <label htmlFor="check-partners" className="footer-label-trigger" role="button">LOREM PARTNERS</label>
+                        </h2>
                         <ul className="footer-list">
                             <li><a href="/non-proident-sunt">Non proident sunt</a></li>
                             <li><a href="/culpa-qui-officia">Culpa qui officia</a></li>
@@ -54,7 +65,10 @@ export default function Footer() {
 
                     {/* -- Group Sites -- */}
                     <section className="footer-column">
-                        <h2 className="footer-title">LOREM GROUP SITES</h2>
+                        <input type="checkbox" id="check-sites" className="footer-toggle" />
+                        <h2 className="footer-title">
+                            <label htmlFor="check-sites" className="footer-label-trigger" role="button">LOREM GROUP SITES</label>
+                        </h2>
                         <ul className="footer-list">
                             <li><a href="/anim-id-est-laborum">Anim id est laborum</a></li>
                             <li><a href="/sed-ut-perspiciatis">Sed ut perspiciatis</a></li>

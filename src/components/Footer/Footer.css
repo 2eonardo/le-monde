@@ -85,3 +85,11 @@
     gap: 1.56rem;
     margin-top: 0.94rem;
 }
+.footer-toggle {
+    display: none; /* La checkbox non si vede mai */
+}
+
+.footer-label-trigger {
+    display: block; /* Occupa tutta la larghezza */
+    cursor: default; /* In desktop non deve sembrare un bottone */
+}
