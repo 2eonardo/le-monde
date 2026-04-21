@@ -15,11 +15,11 @@ body:has(#services-toggle:checked) {
     top: 5.1rem;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: auto;
     background-color: #ffffff;
     z-index: 99999;
     overflow-y: auto;
-    overscroll-behavior: contain
+    overscroll-behavior: contain;
 }
 
 .services-checkbox:checked ~ .services-overlay {
