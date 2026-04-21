@@ -40,9 +40,9 @@ const RightHeader = () => (
     </div>
 );
 
-const MenuButton = () => (
+const MenuButton = ({iconUrl}) => (
     <label htmlFor="menu-toggle" className="nav-button"  role="button" tabIndex="0">
-        <img src="https://placehold.co/40x40/666666/ffffff?text=M" alt="" aria-hidden="true" />
+        <img src={iconUrl} alt="" aria-hidden="true" />
         <span id="menu-button-label">Menu</span>
     </label>
 )
@@ -64,7 +64,7 @@ export default function Header() {
                 </div>
                 {/* Sezione a comparsa max-width 1024px:*/}
                 <div className="menu-button">
-                    <MenuButton/>
+                    <MenuButton iconUrl={"https://placehold.co/40x40/666666/ffffff?text=MS"}/>
                 </div>
                 {/* CENTRO: Logo principale */}
                 <div className="center-header">
@@ -77,7 +77,7 @@ export default function Header() {
             </div>
             {/* Barra di navigazione principale */}
             <nav className="nav-bar" aria-label="Main navigation">
-                <MenuButton/>
+                <MenuButton iconUrl={'https://placehold.co/40x40/666666/ffffff?text=M'}/>
                 <a href="/search" className="nav-button" aria-label="Search">
                     <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
                 </a>

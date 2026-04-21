@@ -55,19 +55,10 @@
         margin: 0 !important;
     }
 
-    /* Sostituzione Icone tramite pseudo-elementi */
-    .nav-button::before {
-        content: "";
-        display: inline-block;
+    .nav-button img {
         width: 1.5rem;
         height: 1.5rem;
         border-radius: 2px;
-        background: url('https://placehold.co/40x40/666666/ffffff?text=MS') no-repeat center;
-        background-size: contain;
-    }
-
-    .nav-button img {
-        display: none;
     }
 
     /* Tablet Buttons & Dividers */
