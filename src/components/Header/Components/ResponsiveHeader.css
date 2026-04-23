@@ -11,6 +11,7 @@
    MAX 1024px (TABLET)
    ================================ */
 @media (max-width: 1024px) {
+
     .nav-bar {
         padding: 0.2rem 1rem !important;
     }
@@ -32,7 +33,7 @@
     }
 
     .center-header img {
-        height: 2rem;
+        height: 2.2rem;
     }
 
     /* Menu Button Layout */
@@ -44,15 +45,15 @@
     }
 
 
-
     /* Tablet Buttons & Dividers */
     .tablet-button {
         display: flex;
     }
 
     .tablet-button button img {
-        height: 1.2rem;
+        height: 1.3rem;
         margin-bottom: 0.3rem;
+        border-radius: 2px;
     }
 
     .menu-divider {
@@ -65,6 +66,9 @@
    MAX 767px (MOBILE)
    ================================ */
 @media (max-width: 767px) {
+    .upper-header {
+        padding: 0.7rem 0.5rem ;
+    }
     .nav-button span,
     .nav-bar > .nav-button > span {
         display: none;
@@ -78,7 +82,15 @@
         height: 1.8rem;
     }
 
-    .menu-button {
+    .menu-button{
         margin-left: 0;
+    }
+
+    .tablet-button button {
+        padding-left: 0;
+    }
+
+    .div-account{
+        margin-right:0;
     }
 }

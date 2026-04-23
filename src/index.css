@@ -7,7 +7,6 @@
 html {
     /* Il telecomando che scala tutto il sito */
     font-size: clamp(13px, 0.8rem + 0.4vw, 16px);
-
     /* MODIFICA: overflow-x deve essere visibile o clip per non rompere lo sticky */
     overflow-x: clip;
 }

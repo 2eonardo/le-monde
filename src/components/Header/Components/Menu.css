@@ -107,11 +107,11 @@
 /* ---- ACCORDION ---- */
 .accordion { padding: 15px 0; }
 .accordion-label { display: flex; justify-content: space-between; align-items: center; padding: 10px 10px 10px 16px; background: white; cursor: pointer; font-weight: bold; color: #111827; }
-.accordion-label h3{font-size: 15px}
+.accordion-label {font-size: 15px; margin: 5px;}
 .accordion-label:hover { background-color: #f9fafb; }
 .accordion-icon { transition: transform 0.2s ease; }
 .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; background: white; }
-.accordion-content a { display: block; padding: 10px 20px; text-decoration: none; color: #374151; font-size: 14px; margin: 5px; }
+.accordion-content a { display: block; padding: 10px 20px; text-decoration: none; color: #374151; font-size: 14px; margin: 10px; }
 .accordion-content a:hover { background-color: #f9fafb;}
 
 .accordion-checkbox:checked ~ h3 .accordion-icon {

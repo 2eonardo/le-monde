@@ -15,11 +15,14 @@ body:has(#services-toggle:checked) {
     top: 5.1rem;
     left: 0;
     right: 0;
-    bottom: auto;
+    bottom: 0;
     background-color: #ffffff;
     z-index: 99999;
     overflow-y: auto;
     overscroll-behavior: contain;
+
+    /* Migliora lo scroll sui telefoni (evita scatti) */
+    -webkit-overflow-scrolling: touch;
 }
 
 .services-checkbox:checked ~ .services-overlay {
@@ -55,12 +58,6 @@ body:has(#services-toggle:checked) {
 
 .services-close-label:hover {
     background-color: rgb(245, 245, 245);
-}
-
-/* Focus per accessibilità tastiera */
-.services-close-label:focus {
-    outline: 2px solid #000;
-    outline-offset: 2px;
 }
 
 /* 5. STRUTTURA GRID */
@@ -135,4 +132,5 @@ body:has(#services-toggle:checked) {
     .services-main-grid { grid-template-columns: 1fr; row-gap: 3rem; }
     .services-section:nth-child(even) { border-left: none; padding-left: 0; }
     .services-section { padding: 0 1rem; }
+
 }
