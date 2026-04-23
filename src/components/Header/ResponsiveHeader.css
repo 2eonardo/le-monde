@@ -16,12 +16,9 @@
     }
 
     /* Nascondi elementi Desktop */
-    .nav-bar > button img,
-    .nav-bar label img,
-    .upper-header .left-header,
-    .upper-header .language-switcher,
+    .left-header,
+    .language-switcher,
     .nav-bar > a,
-    .nav-bar > button,
     .nav-bar label {
         display: none;
     }
@@ -46,20 +43,7 @@
         margin-left: 0;
     }
 
-    .menu-button button span,
-    .menu-button label span,
-    .tablet-button button span {
-        font-size: 0.7rem !important;
-        font-weight: 700 !important;
-        line-height: 1 !important;
-        margin: 0 !important;
-    }
 
-    .nav-button img {
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 2px;
-    }
 
     /* Tablet Buttons & Dividers */
     .tablet-button {

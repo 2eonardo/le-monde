@@ -17,6 +17,7 @@
     box-sizing: border-box;
     padding: 0.7rem 1rem 0.4rem;
     border-bottom: 1px solid #333;
+    width: 100%;
 }
 
 /* ================================

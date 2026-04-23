@@ -1,0 +1,96 @@
+.sticky-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px; /* ALTEZZA AUMENTATA come richiesto */
+    background-color: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* ============================================================
+   2. REGULAR DISPLAY (Layout Orizzontale)
+   ============================================================ */
+.regular-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* --- CENTER BAR (Contiene: m + Menu + NavList) --- */
+.center-bar {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Prende tutto lo spazio tra logo e account */
+    min-width: 0; /* Permette al flex-item di restringersi per lo scroll */
+    margin-right: 3rem; /* CREA LO STACCO dal tasto S'abonner */
+}
+
+/* Impediamo che il logo 'm' e il MenuButton vadano in overflow */
+.center-bar > img {
+    flex-shrink: 0;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.center-bar > label,
+.center-bar > .nav-button {
+    flex-shrink: 0; /* Forza il tasto Menu a restare integro */
+}
+
+/* --- LA LISTA (L'unica che deve scrollare) --- */
+.center-bar .nav-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    margin-left: 1.5rem; /* DISTANZA tra tasto Menu e lista */
+    padding: 0 !important;
+}
+
+.center-bar .nav-link::-webkit-scrollbar { display: none; }
+
+/* ============================================================
+   3. BOTTONI ACCOUNT (S'abonner + Icona)
+   ============================================================ */
+.regular-display > .div-account,
+.regular-display > div:last-child {
+    flex-shrink: 0; /* Impedisce che il tasto giallo si schiacci */
+    display: flex;
+    align-items: center;
+}
+
+/* Forza lo stile per eliminare Serif e rendere nitido il testo */
+.sticky-bar-container * {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+/* ============================================================
+   4. RESPONSIVE
+   ============================================================ */
+.tablet-display {
+    display: none;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .tablet-display { display: flex; }
+    .regular-display { display: none; }
+}

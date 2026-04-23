@@ -9,17 +9,16 @@
     height: 54px;
     width: 100%;
     background-color: #000;
-    -webkit-mask-image: linear-gradient(to right, black 92%, transparent 100%);
-    mask-image: linear-gradient(to right, black 92%, transparent 100%);
+
 }
 
 /* ================================
    2. BUTTONS & LINKS (General)
    ================================ */
 .nav-button,
-.nav-bar button,
-.nav-bar label,
-.nav-bar a {
+.tablet-button button,
+.tablet-button label
+ {
     display: flex;
     align-items: center;
     justify-content: center; /* Aggiunto qui per fondere le due classi duplicate */
@@ -37,45 +36,16 @@
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-.nav-bar button span,
-.nav-bar label span {
+.tablet-button span {
     font-size: 0.9rem;
     font-weight: 700;
-    margin-left: 0.6rem;
 }
 
-.nav-bar img {
-    height: 1.2rem;
-    width: auto;
-    border-radius: 2px;
-}
+
 
 /* ================================
    3. HORIZONTAL SCROLL LIST
    ================================ */
-.nav-bar ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-link {
-    overflow-x: auto;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    scrollbar-width: none; /* Firefox */
-}
-
-.nav-link::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
-}
-
-.nav-link li {
-    flex-shrink: 0;
-}
 
 .nav-link li a {
     color: #fff;
@@ -90,6 +60,29 @@
     border-radius: 0.12rem;
     transition: border-bottom 0.3s ease;
 }
+
+.nav-link a:hover {
+    border-bottom: 3px solid #6b99c3;
+}
+
+.nav-link {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    scrollbar-width: none; /* Firefox */
+
+}
+
+.nav-link::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.nav-link li {
+    flex-shrink: 0;
+}
+
+
 
 .nav-link a:hover {
     border-bottom: 3px solid #6b99c3;
@@ -127,4 +120,17 @@
     font-size: 0.75rem;
     margin: 0 0.2rem;
     white-space: nowrap;
+}
+.nav-button span {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-left: 0.6rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+
+.nav-button img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 2px;
 }
