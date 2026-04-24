@@ -1,7 +1,7 @@
 import React from 'react';
-import './AboveArticle.css';
+import './MostRead.css';
 
-export default function AboveArticle() {
+export default function MostRead() {
     return (
         <div className="side-section most-read-container">
             <h2 className="most-read-header">LES PLUS LUS</h2>

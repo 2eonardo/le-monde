@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';import './Components/UpperHeader.css';
-import {NavBar, UpperHeader} from "./Components/components.jsx";
-import {StickyBar} from './Components/StickyBar.jsx';
-import Services from "./Components/Services.jsx";
-import Menu from "./Components/Menu.jsx";
-import './Components/StickyBar.css'
-
+import React, { useState, useEffect, useRef } from 'react';import './Section/UpperHeader.css';
+import {UpperHeader} from "./Section/UpperHeader.jsx";
+import {NavBar} from "./Section/NavBar.jsx";
+import {StickyBar} from './Section/StickyBar.jsx';
+import Services from "./Overlays/Services.jsx";
+import Menu from "./Overlays/Menu.jsx";
+import './Header.css'
 
 export default function Header() {
     const [isStickyVisible, setIsStickyVisible] = useState(false);

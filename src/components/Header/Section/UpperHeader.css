@@ -1,14 +1,6 @@
 /* ================================
    1. MAIN CONTAINER & LAYOUT
    ================================ */
-.main-header {
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 100%;
-    position: relative;
-}
 
 .upper-header {
     display: flex;
@@ -104,37 +96,7 @@
 .selected { color: #fff; text-decoration: underline; }
 .unselected { color: #777; text-decoration: none; }
 
-.div-account {
-    display: flex;
-    align-items: center;
-}
 
-.div-account button {
-    background-color: #f1bd39;
-    color: #000;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: 0.9rem;
-    font-weight: 700;
-    padding: 0.6em 1.2em;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: background-color 0.2s;
-}
-
-.div-account a {
-    display: flex;
-    align-items: center;
-    padding: 0.6rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.2s;
-}
-
-.div-account img {
-    height: 1.2rem;
-    width: 1.2rem;
-    border-radius: 50%;
-}
 
 /* ================================
    5. MOBILE MENU BUTTON (Hidden Desktop)
@@ -153,11 +115,47 @@
 .left-header a:hover,
 .left-header button:hover,
 .left-header label:hover,
-.language-switcher a:hover,
-.div-account a:hover {
+.language-switcher a:hover{
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-.div-account button:hover {
-    background-color: #d9a82d;
+@media (max-width: 1024px){
+    .left-header,
+    .language-switcher
+    {
+        display: none;
+    }
+
+    /* Center Header Adjustments */
+    .center-header {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 0.5rem;
+    }
+
+    .center-header img {
+        height: 2.2rem;
+    }
+
+    /* Menu Button Layout */
+    .menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .upper-header {
+        padding: 0.7rem 0.5rem ;
+    }
+    .center-header img {
+        height: 1.8rem;
+    }
+
+    .menu-button{
+        margin-left: 0;
+    }
 }

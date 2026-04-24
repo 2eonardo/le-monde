@@ -1,7 +1,7 @@
 import React from 'react';
-import './MainArticle.css';
+import './MainNews.css';
 
-export default function MainArticle() {
+export default function MainNews() {
     return (
         <div className="main-article">
             {/* 1. TITOLO PRINCIPALE */}

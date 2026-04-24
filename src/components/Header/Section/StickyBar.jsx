@@ -1,5 +1,6 @@
 import React from "react";
-import {AccountButtons, MenuButton, NavList, UpperHeader} from "./components.jsx";
+import {AccountButtons, MenuButton, NavList} from "../UI/HeaderElements.jsx";
+import { UpperHeader} from "./UpperHeader.jsx"
 import './StickyBar.css'
 
 export function StickyBar({ isVisible }) {

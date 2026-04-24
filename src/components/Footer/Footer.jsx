@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import './FooterResponsive.css';
 
 export default function Footer() {
     const icon = "https://placehold.co/16x16/777/white?text=i";

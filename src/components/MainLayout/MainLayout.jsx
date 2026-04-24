@@ -1,10 +1,10 @@
 import React from 'react';
-import './MainBody.css';
-import MainArticle from './MainArticle';
-import SideArticle from './SideArticle';
-import AboveArticle from './AboveArticle';
+import './MainLayout.css';
+import MainNews from './MainNews.jsx';
+import SideNews from './SideNews.jsx';
+import MostRead from './MostRead.jsx';
 
-export default function MainBody() {
+export default function MainLayout() {
     return (
         <main className="main-body">
             {/* Pubblicità */}
@@ -14,14 +14,14 @@ export default function MainBody() {
 
             <div className="main-section">
                 {/* --- COLONNA SINISTRA (MAIN ARTICLE) --- */}
-                <MainArticle />
+                <MainNews />
 
                 {/* --- COLONNA DESTRA (SIDE ARTICLE) --- */}
-                <SideArticle />
+                <SideNews />
             </div>
 
             {/* --- PARTE INFERIORE ALLE 2 COLONNE --- */}
-            <AboveArticle />
+            <MostRead />
         </main>
     );
 }

@@ -15,7 +15,6 @@
 /* ================================
    2. BUTTONS & LINKS (General)
    ================================ */
-.nav-button,
 .tablet-button button{
     display: flex;
     align-items: center;
@@ -30,9 +29,7 @@
     transition: background-color 0.2s;
 }
 
-.nav-button:hover{
-    background-color: rgba(255, 255, 255, 0.15);
-}
+
 
 .tablet-button span {
     font-size: 0.9rem;
@@ -45,64 +42,15 @@
    3. HORIZONTAL SCROLL LIST
    ================================ */
 
-.nav-link li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 700;
-    padding: 0.3rem 0;
-    margin: 0 0.4rem;
-    white-space: nowrap;
-    position: relative;
-    border-bottom: 3px solid transparent;
-    border-radius: 0.12rem;
-    transition: border-bottom 0.3s ease;
-}
-
-.nav-link a:hover {
-    border-bottom: 3px solid #6b99c3;
-}
-
-.nav-link {
-    overflow-x: auto;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    scrollbar-width: none; /* Firefox */
-
-}
-
-.nav-link::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
-}
-
-.nav-link li {
-    flex-shrink: 0;
-}
-
-
-
-.nav-link a:hover {
-    border-bottom: 3px solid #6b99c3;
-    border-radius: 3px 2px 0 0;
-}
-
-.nav-highlight {
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 700;
-}
-
 /* ================================
    4. DIVIDERS & TABLET BUTTONS
    ================================ */
-.menu-divider,
-.list-divider {
+.menu-divider {
     background-color: #333;
     margin: 0 0.4rem;
 }
 
 .menu-divider { width: 1px; height: 1.8rem; }
-.list-divider { width: 2px; height: 1.8rem; }
 
 .tablet-button {
     display: none;
@@ -119,16 +67,44 @@
     margin: 0 0.2rem;
     white-space: nowrap;
 }
-.nav-button span {
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-left: 0.6rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+.
+@media (max-width: 1400px) {
+    .nav-bar {
+        justify-content: flex-start;
+    }
 }
 
+@media (max-width: 1024px) {
+    .nav-bar {
+        padding: 0.2rem 1rem !important;
+    }
 
-.nav-button img {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 2px;
+    .nav-bar > a,
+    .nav-bar label {
+        display: none;
+    }
+    .tablet-button {
+        display: flex;
+    }
+
+    .tablet-button button img {
+        height: 1.3rem;
+        margin-bottom: 0.3rem;
+        border-radius: 2px;
+    }
+
+    .menu-divider {
+        flex-shrink: 0;
+        margin: 0 0.62rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-button span,
+    .nav-bar > .nav-button > span {
+        display: none;
+    }
+    .tablet-button button {
+        padding-left: 0;
+    }
 }

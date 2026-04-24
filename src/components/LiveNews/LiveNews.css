@@ -62,3 +62,15 @@
 }
 
 .live-news-button:hover { background-color: #f9f9f9; }
+
+@media (max-width: 1200px) {
+    .live-news .news:last-of-type {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .live-news {
+        display: none;
+    }
+}

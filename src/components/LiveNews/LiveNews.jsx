@@ -1,6 +1,5 @@
 import React from 'react';
 import './LiveNews.css';
-import './LiveNewsResponsive.css'
 
 const newsData = [
     { time: '10:46', label: 'ALERTE', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique.' },

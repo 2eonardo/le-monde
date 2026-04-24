@@ -1,8 +1,8 @@
 import './App.css'
 import Header from "./components/Header/Header.jsx";
-import LiveNews from "./components/LiveNews.jsx";
+import LiveNews from "./components/LiveNews/LiveNews.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import MainBody from "./components/body/MainBody.jsx";
+import MainLayout from "./components/MainLayout/MainLayout.jsx";
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <>
         <Header />
         <LiveNews />
-        <MainBody />
+        <MainLayout />
         <Footer />
     </>
   )

@@ -1,7 +1,7 @@
 import React from 'react';
-import './SideArticle.css';
+import './SideNews.css';
 
-export default function SideArticle() {
+export default function SideNews() {
     return (
         <div className="side-article">
             {/* 1. NOTIZIA SIDEBAR */}
