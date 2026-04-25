@@ -1,105 +1,103 @@
 .nav-button {
     display: flex;
     align-items: center;
-    justify-content: center; /* Aggiunto qui per fondere le due classi duplicate */
+    justify-content: center;
     background: transparent;
     border: none;
-    color: #fff;
-    text-decoration: none;
+    color: var(--brand-white);
     cursor: pointer;
     padding: 0.6rem 0.8rem;
     border-radius: 0.25rem;
     transition: background-color 0.2s;
-}
-.nav-link li a {
-    color: #fff;
     text-decoration: none;
-    font-size: 0.85rem;
+}
+.nav-button:hover { background-color: var(--brand-hover-light); }
+.nav-button img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 2px; }
+.nav-button span {
+    font-size: 0.9rem;
     font-weight: 700;
-    padding: 0.3rem 0;
-    margin: 0 0.4rem;
-    white-space: nowrap;
-    position: relative;
-    border-bottom: 3px solid transparent;
-    border-radius: 0.12rem;
-    transition: border-bottom 0.3s ease;
+    margin-left: 0.6rem;
+    font-family: var(--font-sans), sans-serif;
 }
 
-.nav-link a:hover {
-    border-bottom: 3px solid #6b99c3;
+/* BOTTONI UPPER HEADER (Journal, Services) */
+.left-header-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: var(--brand-white);
+    margin: 0 0.5rem;
+    padding: 0.3rem 0.2rem;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.left-header-button:hover { background-color: var(--brand-hover-light); }
+.left-header-button img { height: 1.5rem; border-radius: 2px; }
+.left-header-button span {
+    margin: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
 }
 
+/* LOGO (Con ridimensionamento responsive integrato) */
+.main-logo { display: flex; justify-content: center; align-items: center; }
+.main-logo img { height: 3.5rem; max-width: 100%; border-radius: 2px; }
+
+/* LISTA NAVIGAZIONE */
 .nav-link {
     overflow-x: auto;
     white-space: nowrap;
     display: flex;
     align-items: center;
-    scrollbar-width: none; /* Firefox */
-
+    scrollbar-width: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-
-.nav-link::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
-}
-
-.nav-link li {
-    flex-shrink: 0;
-}
-
-
-
-.nav-link a:hover {
-    border-bottom: 3px solid #6b99c3;
-    border-radius: 3px 2px 0 0;
-}
-
-.nav-highlight {
-    font-family: "Times New Roman", Times, serif;
+.nav-link::-webkit-scrollbar { display: none; }
+.nav-link li a {
+    color: var(--brand-white);
+    text-decoration: none;
+    font-size: 0.85rem;
     font-weight: 700;
-}
-
-/* ================================
-   4. DIVIDERS & TABLET BUTTONS
-   ================================ */
-.list-divider {
-    background-color: #333;
+    padding: 0.2rem 0;
     margin: 0 0.4rem;
+    position: relative;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+.nav-link a:hover { border-bottom: 3px solid var(--ui-event-blue); }
+.nav-highlight { font-family: var(--font-serif), serif; font-weight: 700; }
+.list-divider {
+    background-color: var(--brand-divider);
+    margin: 0 0.4rem;
+    width: 2px;
+    height: 1.8rem;
+    flex-shrink: 0 ;
 }
 
-.list-divider { width: 2px; height: 1.8rem; }
-
-.nav-button span {
-    font-size: 0.9rem;
-    font-weight: 700;
-    margin-left: 0.6rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-}
-
-
-.nav-button img {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 2px;
-}
-
-.div-account {
-    display: flex;
-    align-items: center;
-}
-
-.div-account button {
-    background-color: #f1bd39;
-    color: #000;
+/* ACCOUNT E LINGUA */
+.div-account { display: flex; align-items: center; }
+.btn-subscribe {
+    background-color: var(--brand-accent);
+    color: var(--brand-black);
     border: none;
     border-radius: 0.25rem;
     font-size: 0.9rem;
     font-weight: 700;
     padding: 0.6em 1.2em;
     cursor: pointer;
-    white-space: nowrap;
     transition: background-color 0.2s;
 }
-
+.btn-subscribe:hover { background-color: var(--brand-accent-hover); }
 .div-account a {
     display: flex;
     align-items: center;
@@ -107,30 +105,45 @@
     border-radius: 0.25rem;
     transition: background-color 0.2s;
 }
+.div-account a:hover { background-color: var(--brand-hover-light); }
+.div-account img { height: 1.2rem; width: 1.2rem; border-radius: 50%; }
 
-.div-account img {
-    height: 1.2rem;
-    width: 1.2rem;
-    border-radius: 50%;
+.language-switcher { display: flex; align-items: center; margin-right: 0.5rem; }
+.language-switcher a {
+    font-size: 0.85rem;
+    padding: 0.5rem; border-radius:
+        0.25rem; text-decoration: none;
+    color: var(--text-muted);
+}
+.language-switcher a:hover { background-color: var(--brand-hover-light); }
+.divider-lang {
+    width: 1px;
+    height: 0.87rem;
+    background-color: var(--brand-divider);
+    margin: 0 0.12rem;
+}
+.language-switcher a.selected {
+    color: var(--brand-white);
+    text-decoration: underline ; font-weight: 600;
 }
 
-.div-account a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+/* TABLET BUTTONS */
+.tablet-button { display: none; align-items: center; justify-content: center; }
+.tablet-button button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--brand-white);
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
 }
-
-.div-account button:hover {
-    background-color: #d9a82d;
-}
-
-.nav-button:hover{
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-@media (max-width: 768px){
-    .nav-button{
-        padding: 0.5rem;
-    }
-    .div-account{
-        margin-right:0;
-    }
+.tablet-button button span {
+    font-size: 0.75rem;
+    margin: 0 0.2rem;
+    white-space: nowrap;
+    font-weight: 700;
 }

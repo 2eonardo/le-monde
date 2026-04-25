@@ -1,13 +1,13 @@
 .main-footer {
-    background-color: #2c333a;
-    color: #fff;
+    background-color: var(--brand-blue-footer);
+    color: var(--brand-white);
     padding: 3.12rem 0;
     font-family: Arial, sans-serif;
     font-size: 0.75rem;
     line-height: 1.4;
 }
 
-.main-footer a { color: #fff; text-decoration: none; }
+.main-footer a { color: var(--brand-white); text-decoration: none; }
 .main-footer a:hover { text-decoration: underline; }
 
 .footer-container {

@@ -1,161 +1,28 @@
-/* ================================
-   1. MAIN CONTAINER & LAYOUT
-   ================================ */
-
 .upper-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0.7rem 1rem ;
-    width: 100%;
+    display: flex; justify-content: space-between; align-items: center;
+    box-sizing: border-box; padding: 0.7rem 1rem; width: 100%;
 }
 
-/* ================================
-   2. HEADER SECTIONS
-   ================================ */
-.left-header,
-.right-header {
-    display: flex;
-    align-items: center;
-    flex: 1;
+.left-header, .right-header { display: flex; align-items: center; flex: 1; }
+.right-header { justify-content: flex-end; }
+.center-header { flex: 2; display: flex; justify-content: center; }
+
+.upper-header .nav-button { display: none; }
+
+@media (max-width: 1024px) {
+    /* Nasconde intere sezioni */
+    .left-header, .right-header .language-switcher { display: none ; }
+
+    /* Logo a sinistra */
+    .center-header { flex: 1; justify-content: flex-start; margin-left: 0.5rem; }
+    .upper-header .main-logo img { height: 2.2rem; }
+
+    /* Mostra il tasto menu tablet */
+    .upper-header .nav-button { display: flex; align-items: center; justify-content: center; }
 }
 
-.right-header {
-    justify-content: flex-end;
-}
+@media (max-width: 768px) {
+    .upper-header { padding: 0.7rem 0.5rem; }
+    .upper-header .main-logo img { height: 1.8rem; }
 
-.center-header {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-}
-
-.center-header img {
-    height: 3.5rem;
-    max-width: 100%;
-    border-radius: 2px;
-}
-
-/* ================================
-   3. LEFT HEADER ITEMS
-   ================================ */
-.left-header a,
-.left-header button,
-.left-header label{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: transparent;
-    border: none;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 0 0.5rem;
-    padding: 0.3rem 0.2rem;
-    border-radius: 2px;
-    transition: background-color 0.2s;
-}
-
-.left-header img {
-    height: 1.5rem;
-    border-radius: 2px;
-}
-
-.left-header span {
-    margin: 0.3rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05rem;
-}
-
-/* ================================
-   4. RIGHT HEADER: LANGUAGE & ACCOUNT
-   ================================ */
-.language-switcher {
-    display: flex;
-    align-items: center;
-    margin-right: 0.5rem;
-}
-
-.language-switcher a {
-    font-size: 0.85rem;
-    font-weight: 500;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.2s;
-}
-
-.divider-lang {
-    width: 1px;
-    height: 0.87rem;
-    background-color: #444;
-    margin: 0 0.12rem;
-}
-
-.selected { color: #fff; text-decoration: underline; }
-.unselected { color: #777; text-decoration: none; }
-
-
-
-/* ================================
-   5. MOBILE MENU BUTTON (Hidden Desktop)
-   ================================ */
-.menu-button {
-    display: none;
-}
-
-.menu-button span {
-    padding: 0 0.5rem;
-}
-
-/* ================================
-   6. HOVER EFFECTS
-   ================================ */
-.left-header a:hover,
-.left-header button:hover,
-.left-header label:hover,
-.language-switcher a:hover{
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-@media (max-width: 1024px){
-    .left-header,
-    .language-switcher
-    {
-        display: none;
-    }
-
-    /* Center Header Adjustments */
-    .center-header {
-        flex: 1;
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 0.5rem;
-    }
-
-    .center-header img {
-        height: 2.2rem;
-    }
-
-    /* Menu Button Layout */
-    .menu-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 768px){
-    .upper-header {
-        padding: 0.7rem 0.5rem ;
-    }
-    .center-header img {
-        height: 1.8rem;
-    }
-
-    .menu-button{
-        margin-left: 0;
-    }
 }

@@ -1,24 +1,62 @@
-* {
-    margin: 0;
+:root {
+    /* Brand Colors */
+    --brand-black: #000000;
+    --brand-white: #ffffff;
+    --brand-accent: #f1bd39;
+    --brand-accent-hover: #d9a82d;
+    --brand-live: #bc0000;
+    --ui-event-blue: #3675af;
+    --ui-bg-soft: #f9f9f9;
+    /* UI Elements */
+    --brand-divider: #333333;
+    --ui-border-light: #eeeeee;   /* Usato per sfondi grigio chiaro */
+    --ui-border-medium: #dddddd;  /* Usato per i bordi */
+    --brand-hover-light: rgba(255, 255, 255, 0.15);
+
+    /* Typography */
+    --text-dark: #1a1a1a;
+    --text-muted: #bab7b7;
+    --brand-blue-footer: #2c333a;
+    --ui-text-muted-dark: #686868;
+
+
+    /* Fonts con fallback per eliminare i warning */
+    --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-narrow: "Arial Narrow", sans-serif;
+    --font-serif: "Times New Roman", Times, serif;
+}
+
+/* Reset Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: clamp(13px, 0.8rem + 0.4vw, 16px); overflow-x: clip; }
+body { width: 100%; min-height: 100vh; background-color: var(--brand-white);
+
+    font-family: var(--font-sans), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;}
+
+/* GESTIONE SCROLL GLOBALE (Centralizzata qui per Menu e Services) */
+:root:has(#menu-toggle:checked),
+:root:has(#services-toggle:checked) {
+    overflow: hidden ;
+}
+
+:root:has(#menu-toggle:checked) body,
+:root:has(#services-toggle:checked) body {
+    overflow: hidden ;
+    height: 100vh ;
+    scrollbar-gutter: stable;
+}
+
+/* Helper Class per Accessibilità */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    /* Il telecomando che scala tutto il sito */
-    font-size: clamp(13px, 0.8rem + 0.4vw, 16px);
-    /* MODIFICA: overflow-x deve essere visibile o clip per non rompere lo sticky */
-    overflow-x: clip;
-}
-
-body {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #fff;
-    overflow-x: visible;
-    position: static;
-}
-#root {
-    width: 100%;
-    overflow-x: clip;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); /* "Taglia" visivamente l'elemento */
+    white-space: nowrap;
+    border-width: 0;
 }

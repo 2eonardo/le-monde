@@ -10,7 +10,7 @@ export function StickyBar({ isVisible }) {
         <div className="sticky-bar-container">
             <div className="regular-display">
                 <div className="center-bar">
-                    <img src="https://placehold.co/40x40/666666/ffffff?text=m" alt="" aria-hidden="true" />
+                    <img src="https://placehold.co/40x40/666666/ffffff?text=M" alt="" aria-hidden="true" />
                     <MenuButton iconUrl={"https://placehold.co/40x40/666666/ffffff?text=MS"}/>
                     <NavList />
                 </div>

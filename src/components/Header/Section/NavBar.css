@@ -1,110 +1,36 @@
-/* ================================
-   1. NAVIGATION CONTAINER
-   ================================ */
 .nav-bar {
-    padding: 0.7rem 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 54px;
+    height: 60px;
     width: 100%;
-    background-color: #000;
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--brand-divider);
+    padding: 0.7rem 1rem;
 }
 
-/* ================================
-   2. BUTTONS & LINKS (General)
-   ================================ */
-.tablet-button button{
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Aggiunto qui per fondere le due classi duplicate */
-    background: transparent;
-    border: none;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 0.6rem 0.8rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.2s;
-}
-
-
-
-.tablet-button span {
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-
-
-/* ================================
-   3. HORIZONTAL SCROLL LIST
-   ================================ */
-
-/* ================================
-   4. DIVIDERS & TABLET BUTTONS
-   ================================ */
 .menu-divider {
-    background-color: #333;
+    background-color: var(--brand-divider);
     margin: 0 0.4rem;
+    width: 1px;
+    height: 1.8rem;
 }
 
-.menu-divider { width: 1px; height: 1.8rem; }
-
-.tablet-button {
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.tablet-button button {
-    flex-direction: column;
-}
-
-.tablet-button button span {
-    font-size: 0.75rem;
-    margin: 0 0.2rem;
-    white-space: nowrap;
-}
-.
 @media (max-width: 1400px) {
-    .nav-bar {
-        justify-content: flex-start;
-    }
+    .nav-bar { justify-content: flex-start; }
+    .nav-bar > .nav-button {margin-left: 0.5rem}
 }
 
 @media (max-width: 1024px) {
-    .nav-bar {
-        padding: 0.2rem 1rem !important;
-    }
+    .nav-bar { padding: 0.2rem 1rem; }
+    /* Nasconde la lista desktop e il tasto cerca standard */
+    .nav-bar > .nav-button { display: none; }
 
-    .nav-bar > a,
-    .nav-bar label {
-        display: none;
-    }
-    .tablet-button {
-        display: flex;
-    }
-
-    .tablet-button button img {
-        height: 1.3rem;
-        margin-bottom: 0.3rem;
-        border-radius: 2px;
-    }
-
-    .menu-divider {
-        flex-shrink: 0;
-        margin: 0 0.62rem;
-    }
+    .tablet-button { display: flex; }
+    .tablet-button button img { height: 1.3rem; margin-bottom: 0.3rem; border-radius: 2px; }
+    .menu-divider { flex-shrink: 0; margin: 0 0.62rem; }
 }
 
 @media (max-width: 768px) {
-    .nav-button span,
-    .nav-bar > .nav-button > span {
-        display: none;
-    }
-    .tablet-button button {
-        padding-left: 0;
-    }
+    .tablet-button button { padding-left: 0; }
+    .nav-button span { display: none; }
 }

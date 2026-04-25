@@ -1,8 +1,8 @@
 .live-news {
     padding: 0.5rem 0;
     display: flex;
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
+    background-color: var(--brand-white);
+    border-bottom: 1px solid var(--ui-border-light);
     margin: 0.5rem 1rem;
 }
 
@@ -12,7 +12,7 @@
     flex: 1;
     padding: 0 1.25rem;
     cursor: pointer;
-    border-right: 1px solid #eee;
+    border-right: 1px solid var(--ui-border-light);
 }
 
 .news div {
@@ -23,7 +23,7 @@
 }
 
 .news-time, .span-label, .news a {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
 }
 
 .news-time {
@@ -33,27 +33,26 @@
 }
 
 .span-label {
-    color: #bc0000;
-    font-weight: 900;
-    text-transform: uppercase;
+    color: var(--brand-live);
+    font-weight: 700;
 }
 
 .news a {
     text-decoration: none;
-    color: #1a1a1a;
+    color: var(--text-dark);
     line-height: 1.4;
 }
 
 .news:hover a {
     text-decoration: underline;
-    color: #000;
+    color: var(--brand-black);
 }
 
 .button-div { padding: 0 1.25rem; }
 
 .live-news-button {
     background-color: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid var(--ui-border-medium);
     border-radius: 1.25rem;
     padding: 0.3rem 0.9rem;
     cursor: pointer;
@@ -61,7 +60,7 @@
     transition: background 0.2s;
 }
 
-.live-news-button:hover { background-color: #f9f9f9; }
+.live-news-button:hover { background-color: var(--ui-border-light); }
 
 @media (max-width: 1200px) {
     .live-news .news:last-of-type {

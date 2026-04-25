@@ -35,3 +35,50 @@ export const MenuButton = ({iconUrl}) => (
         <span id="menu-button-label">Menu</span>
     </label>
 )
+
+export const NewsPaperButton = () =>(
+    <a href="/newspaper" className="left-header-button" aria-label=" Digital newspaper">
+            <img src="https://placehold.co/40x40/666666/ffffff?text=J" alt="" aria-hidden="true" />
+            <span>Le journal</span>
+    </a>
+);
+
+export const ServicesButton = () =>(
+    <label htmlFor="services-toggle" role="button" className="left-header-button" tabIndex="0">
+            <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
+            <span id="services-button-label">Services</span>
+    </label>
+)
+
+export const MainLogo = () =>(
+    <a href="/homepage" className ="main-logo" aria-label="Le Monde - Back to the homepage">
+            <img src="https://placehold.co/600x120/666666/ffffff?text=Le+Monde" alt=""/>
+    </a>
+)
+
+export const LanguagesSwitcher = () =>(
+    <nav className="language-switcher" aria-label="Language selector">
+            <a href="/fr" className="selected" aria-current="page" lang="fr">FR</a>
+            <div className="divider-lang" aria-hidden="true"></div>
+            <a href="/en" className="unselected" lang="en">EN</a>
+    </nav>
+)
+
+export const SearchButton = ()=> (
+    <a href="/search" className="nav-button" aria-label="Search">
+            <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
+    </a>
+)
+
+export const TabletButton = () =>(
+    <div className="tablet-button">
+            <button>
+                    <img src="https://placehold.co/40x40/666666/ffffff?text=V" alt="" aria-hidden="true" />
+                    <span>Videò</span>
+            </button>
+            <button>
+                    <img src="https://placehold.co/40x40/666666/ffffff?text=E" alt="" aria-hidden="true" />
+                    <span>En continu</span>
+            </button>
+    </div>
+)

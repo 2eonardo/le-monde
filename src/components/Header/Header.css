@@ -1,8 +1,14 @@
+:root {
+
+}
+
 .main-header {
-    background-color: #000;
+    background-color: var(--brand-black);
     display: flex;
     flex-direction: column;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--font-sans), sans-serif;
     width: 100%;
     position: relative;
 }
+
+/* Impedisce ai link di sparire diventando blu/viola */
