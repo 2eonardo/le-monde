@@ -162,19 +162,17 @@
         text-align: right;
     }
 
-    .footer-column .footer-list,
-    .footer-column .footer-list-icons {
+    .footer-column .footer-list {
         display: none;
         padding: 1rem 0 1rem 1rem;
         margin: 0;
     }
 
-    .footer-toggle:checked ~ .footer-list,
-    .footer-toggle:checked ~ .footer-list-icons {
+    .footer-toggle:checked + .footer-title + .footer-list{
         display: block !important;
     }
 
-    .footer-toggle:checked ~ .footer-title .footer-label-trigger::after {
+    .footer-toggle:checked + .footer-title .footer-label-trigger::after {
         content: "−"; /* Segno meno */
     }
 

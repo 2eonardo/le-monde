@@ -45,12 +45,7 @@ body { width: 100%; min-height: 100vh; background-color: var(--brand-white);
     overflow: hidden ;
 }
 
-:root:has(#menu-toggle:checked) body,
-:root:has(#services-toggle:checked) body {
-    overflow: hidden ;
-    height: 100vh ;
-    scrollbar-gutter: stable;
-}
+
 
 /* Helper Class per Accessibilità */
 .sr-only {
