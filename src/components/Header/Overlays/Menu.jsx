@@ -59,8 +59,9 @@ const Menu = () => {
                             <a href="/En-direct" className="quick-link"><img src="https://placehold.co/40x40/666666/ffffff?text=E" alt="" aria-hidden="true" className="icon-ph" /> En direct</a>
                         </div>
                         <label htmlFor="voir-plus-toggle" className="voir-plus-label" role="button" tabIndex="0">
-                            <span className="text-plus">Voir plus <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
-                            <span className="text-moins">Voir moins <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M10 8L6 4L2 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+                            <span className="text-plus">Voir plus</span>
+                            <span className="text-moins">Voir moins</span>
+                            <svg className="accordion-icon" width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                         </label>
                     </li>
                 </ul>

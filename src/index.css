@@ -19,11 +19,15 @@
     --brand-blue-footer: #2c333a;
     --ui-text-muted-dark: #686868;
 
+    --event-color: #f4f9fb;
+
 
     /* Fonts con fallback per eliminare i warning */
     --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-narrow: "Arial Narrow", sans-serif;
     --font-serif: "Times New Roman", Times, serif;
+    --font-serif-alt: 'Georgia', serif;
+
 }
 
 /* Reset Base */

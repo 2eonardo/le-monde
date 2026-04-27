@@ -1,9 +1,25 @@
+:root {
+    --m-placeholder: url('https://placehold.co/100x100/ffda44/000000?text=M&font-family=oswald,sans-serif');
+}
+
+.m-logo {
+    content: var(--m-placeholder);
+    width: 16px;
+    height: 16px;
+    transform: scale(2.5);
+    clip-path: inset(30% round 1px);
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 4px;
+    margin-right: 5px;
+}
+
 .main-body {
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-    font-family: 'Georgia', serif;
+    font-family: var(--font-serif-alt), serif;
 }
 
 .advertising {
@@ -14,23 +30,28 @@
 }
 
 .advertising img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border: 1px solid #eee;
 }
 
 .main-section {
     display: flex;
     gap: 30px;
+    width: 100%;
+}
+
+.main-section > .main-article {
+    flex: 2;
+    min-width: 0;
+}
+
+/* Colonna Destra (SideNews) */
+.main-section > .side-article {
+    flex: 1;
+    min-width: 0;
 }
 
 /* Condiviso tra MainNews e SideNews */
-.m-logo {
-    background: #ffd700;
-    padding: 0 4px;
-    font-weight: bold;
-    margin-right: 5px;
-}
 @media (max-width: 1024px) {
     .main-section {
         flex-direction: column;

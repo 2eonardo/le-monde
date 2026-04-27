@@ -84,7 +84,7 @@
 
 .voir-plus-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; display: flex; flex-direction: column; }
 .voir-plus-label { cursor: pointer; color: var(--ui-event-blue); font-size: 14px; display: flex; align-items: center; padding: 15px 15px; margin-bottom: 20px;}
-.text-plus, .text-moins { display: flex; align-items: center; gap: 6px; }
+.text-plus, .text-moins { display: flex; align-items: center; margin-right:5px; }
 .text-moins { display: none; }
 
 .voir-plus-checkbox:checked ~ .voir-plus-content { max-height: 500px; }
@@ -101,7 +101,7 @@
 .accordion-content a { display: block; padding: 10px 30px; text-decoration: none; color: var(--text-dark); font-size: 14px; margin: 10px 0 10px 0;}
 .accordion-content a:hover { background-color: var(--ui-border-light);}
 
-.accordion-checkbox:checked ~ h3 .accordion-icon {
+.accordion-checkbox:checked ~ h3 .accordion-icon, .voir-plus-checkbox:checked ~ .voir-plus-label .accordion-icon {
     transform: rotate(180deg);
 }
 .accordion-checkbox:checked ~ .accordion-content {

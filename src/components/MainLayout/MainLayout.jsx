@@ -9,7 +9,7 @@ export default function MainLayout() {
         <main className="main-body">
             {/* Pubblicità */}
             <div className="advertising">
-                <img src='https://placehold.co/800x200/444444/ffffff?text=800x200' alt="Pub"/>
+                <img src='https://placehold.co/800x200/888/ffffff?text=1000x200' alt="Pub"/>
             </div>
 
             <div className="main-section">
