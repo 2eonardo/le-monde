@@ -1,5 +1,6 @@
 import React from 'react';
 import './MostRead.css';
+import {handleLabelKeyDown} from "../utils/keyboardUtils.jsx";
 
 export default function MostRead() {
     return (
@@ -54,7 +55,7 @@ export default function MostRead() {
 
             {/* CONTENITORE LABEL (Funge da bottone) */}
             <div className="voir-plus-container">
-                <label htmlFor="toggle-voir-plus" className="voir-plus-btn" role="button">
+                <label htmlFor="toggle-voir-plus" className="voir-plus-btn" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown}>
                     <span className="text-more">Voir plus</span>
                     <span className="text-less">Voir moins</span>
                     <svg className="chevron" width="6" height="6" viewBox="0 0 12 12" fill="none" aria-hidden="true">

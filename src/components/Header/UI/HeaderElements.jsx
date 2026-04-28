@@ -1,5 +1,6 @@
 import React from "react";
 import './HeaderElements.css'
+import {handleLabelKeyDown} from "../../utils/keyboardUtils.jsx";
 
 export const NavList = () =>(
     <ul className="nav-link">
@@ -30,7 +31,7 @@ export const AccountButtons = () =>(
 );
 
 export const MenuButton = ({iconUrl}) => (
-    <label htmlFor="menu-toggle" className="nav-button"  role="button" tabIndex="0">
+    <label htmlFor="menu-toggle" className="nav-button"  role="button" tabIndex="0" onKeyDown={handleLabelKeyDown}>
         <img src={iconUrl} alt="" aria-hidden="true" />
         <span id="menu-button-label">Menu</span>
     </label>
@@ -44,7 +45,7 @@ export const NewsPaperButton = () =>(
 );
 
 export const ServicesButton = () =>(
-    <label htmlFor="services-toggle" role="button" className="left-header-button" tabIndex="0">
+    <label htmlFor="services-toggle" role="button" className="left-header-button" tabIndex="0" onKeyDown={handleLabelKeyDown}>
             <img src="https://placehold.co/40x40/666666/ffffff?text=S" alt="" aria-hidden="true" />
             <span id="services-button-label">Services</span>
     </label>

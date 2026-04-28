@@ -8,10 +8,21 @@
     padding: 0;
     margin: 0 0 15px;
 }
-
-/* ---- MOTORE PRINCIPALE (0 JS) ---- */
-.menu-checkbox, .accordion-checkbox, .voir-plus-checkbox { display: none; }
-
+.menu-checkbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none; /* Evita click accidentali */
+}
+.accordion-checkbox, .voir-plus-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
 .menu-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -30,6 +41,7 @@
     max-width: 90vw;
     background-color: var(--brand-white);
     z-index: 10001;
+    visibility: hidden;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
@@ -39,7 +51,7 @@
 }
 
 #menu-toggle:checked ~ .menu-overlay { opacity: 1; visibility: visible; }
-#menu-toggle:checked ~ .menu-drawer { transform: translateX(0); }
+#menu-toggle:checked ~ .menu-drawer { transform: translateX(0); visibility: visible;}
 
 /* ---- HEADER ---- */
 .menu-header {
@@ -81,12 +93,12 @@
 .quick-link:hover { background-color: var(--ui-border-light); }
 .voir-plus-label:hover {text-decoration: underline}
 
-.voir-plus-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; display: flex; flex-direction: column; }
+.voir-plus-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; display: flex; flex-direction: column; visibility: hidden}
 .voir-plus-label { cursor: pointer; color: var(--ui-event-blue); font-size: 14px; display: flex; align-items: center; padding: 15px 15px; margin-bottom: 20px;}
 .text-plus, .text-moins { display: flex; align-items: center; margin-right:5px; }
 .text-moins { display: none; }
 
-.voir-plus-checkbox:checked ~ .voir-plus-content { max-height: 500px; }
+.voir-plus-checkbox:checked ~ .voir-plus-content { max-height: 500px; visibility: visible}
 .voir-plus-checkbox:checked ~ .voir-plus-label .text-plus { display: none; }
 .voir-plus-checkbox:checked ~ .voir-plus-label .text-moins { display: flex; }
 
@@ -96,7 +108,7 @@
 .accordion-label {font-size: 15px; margin: 5px 0 5px 0;}
 .accordion-label:hover { background-color: var(--ui-border-light); }
 .accordion-icon { transition: transform 0.2s ease; }
-.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; background: var(--brand-white); }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; background: var(--brand-white); visibility: hidden; }
 .accordion-content a { display: block; padding: 10px 30px; text-decoration: none; color: var(--text-dark); font-size: 14px; margin: 10px 0 10px 0;}
 .accordion-content a:hover { background-color: var(--ui-border-light);}
 
@@ -105,6 +117,7 @@
 }
 .accordion-checkbox:checked ~ .accordion-content {
     max-height: 800px;
+    visibility: visible;
 }
 /* ---- SEZIONI ---- */
 .section-title { background-color: var(--ui-border-light); padding: 12px 16px; font-size: 14px; font-weight: 500; color: var(--ui-text-muted-dark)}

@@ -22,7 +22,6 @@
 
 @media (max-width: 1024px) {
     .nav-bar { padding: 0.2rem 1rem; }
-    /* Nasconde la lista desktop e il tasto cerca standard */
     .nav-bar > .nav-button { display: none; }
 
     .tablet-button { display: flex; }

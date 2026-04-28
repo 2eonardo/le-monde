@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import {handleLabelKeyDown} from "../utils/keyboardUtils.jsx";
 
 export default function Footer() {
     const icon = "https://placehold.co/16x16/777/white?text=i";
@@ -13,7 +14,7 @@ export default function Footer() {
                     <section className="footer-column">
                         <input type="checkbox" id="check-services" className="footer-toggle" aria-hidden="true" tabIndex="-1"/>
                         <h2 className="footer-title">
-                            <label htmlFor="check-services" className="footer-label-trigger" role="button" tabIndex="0">LOREM IPSUM SERVICES</label>
+                            <label htmlFor="check-services" className="footer-label-trigger" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown} >LOREM IPSUM SERVICES</label>
                         </h2>
                         <ul className="footer-list">
                             <li><a href="/lorem-ipsum-dolor">Lorem ipsum dolor</a></li>
@@ -26,7 +27,7 @@ export default function Footer() {
 
                         <input type="checkbox" id="check-guides" className="footer-toggle" aria-hidden="true" tabIndex="-1"/>
                         <h2 className="footer-title second-title">
-                            <label htmlFor="check-guides" className="footer-label-trigger" role="button" tabIndex="0">LOREM GUIDES</label>
+                            <label htmlFor="check-guides" className="footer-label-trigger" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown} >LOREM GUIDES</label>
                         </h2>
                         <ul className="footer-list">
                             <li><a href="/minim-veniam-quis">Minim veniam quis</a></li>
@@ -38,9 +39,9 @@ export default function Footer() {
                     </section>
 
                     <section className="footer-column">
-                        <input type="checkbox" id="check-internetional" className="footer-toggle" aria-hidden="true" tabIndex="-1"/>
+                        <input type="checkbox" id="check-international" className="footer-toggle" aria-hidden="true" tabIndex="-1"/>
                         <h2 className="footer-title">
-                            <label htmlFor="check-internetional" className="footer-label-trigger" role="button" tabIndex="0">LOREM INTERNATIONAL</label>
+                            <label htmlFor="check-international" className="footer-label-trigger" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown} >LOREM INTERNATIONAL</label>
                         </h2>
                         <ul className="footer-list">
                             <li><a href="/duis-aute-irure">Duis aute irure</a></li>
@@ -53,7 +54,7 @@ export default function Footer() {
                         </ul>
                         <input type="checkbox" id="check-partners" className="footer-toggle" aria-hidden="true" tabIndex="-1"/>
                         <h2 className="footer-title second-title">
-                            <label htmlFor="check-partners" className="footer-label-trigger" role="button" tabIndex="0">LOREM PARTNERS</label>
+                            <label htmlFor="check-partners" className="footer-label-trigger" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown} >LOREM PARTNERS</label>
                         </h2>
                         <ul className="footer-list">
                             <li><a href="/non-proident-sunt">Non proident sunt</a></li>
@@ -66,7 +67,7 @@ export default function Footer() {
                     <section className="footer-column">
                         <input type="checkbox" id="check-sites" className="footer-toggle" aria-hidden="true" tabIndex="-1"/>
                         <h2 className="footer-title">
-                            <label htmlFor="check-sites" className="footer-label-trigger" role="button" tabIndex="0">LOREM GROUP SITES</label>
+                            <label htmlFor="check-sites" className="footer-label-trigger" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown} >LOREM GROUP SITES</label>
                         </h2>
                         <ul className="footer-list">
                             <li><a href="/anim-id-est-laborum">Anim id est laborum</a></li>

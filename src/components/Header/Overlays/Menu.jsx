@@ -1,16 +1,17 @@
 import React from 'react';
 import './Menu.css';
+import {handleLabelKeyDown} from "../../utils/keyboardUtils.jsx";
 
 const Menu = () => {
     return (
         <nav aria-label="Menu laterale Le Monde">
             <input type="checkbox" id="menu-toggle" className="menu-checkbox" aria-labelledby="menu-button-label" tabIndex="-1" />
-            <label htmlFor="menu-toggle" className="menu-overlay" role="button"><span className="sr-only">Close Menu</span> </label>
+            <label htmlFor="menu-toggle" className="menu-overlay" role="button"><span className="sr-only" >Close Menu</span></label>
 
             <div className="menu-drawer" role="dialog" aria-modal="true" aria-labelledby="menu-button-label">
                 {/* Header */}
                 <div className="menu-header">
-                    <label htmlFor="menu-toggle" className="close-btn" role="button" tabIndex="0">
+                    <label htmlFor="menu-toggle" className="close-btn" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown} >
                         <span className="sr-only">Close menu</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M18 6L6 18M6 6L18 18" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -49,7 +50,7 @@ const Menu = () => {
                     <li><a href="/Ukraine" className="quick-link"><img src="https://placehold.co/40x40/666666/ffffff?text=U" alt="" aria-hidden="true" className="icon-ph" /> Ukraine</a></li>
 
                     <li>
-                        <input type="checkbox" id="voir-plus-toggle" className="voir-plus-checkbox" aria-hidden="true" tabIndex="-1" />
+                        <input type="checkbox" id="voir-plus-toggle" className="voir-plus-checkbox" aria-hidden="true" tabIndex="0" />
                         <div className="voir-plus-content">
                             <a href="/Detroit-d-Ormuz" className="quick-link"><img src="https://placehold.co/40x40/666666/ffffff?text=D" alt="" aria-hidden="true" className="icon-ph" /> Détroit d'Ormuz</a>
                             <a href="/Vie-de-l-edition" className="quick-link"><img src="https://placehold.co/40x40/666666/ffffff?text=V" alt="" aria-hidden="true" className="icon-ph" /> Vie de l'édition</a>
@@ -58,7 +59,7 @@ const Menu = () => {
                             <a href="/Pape" className="quick-link"><img src="https://placehold.co/40x40/666666/ffffff?text=P" alt="" aria-hidden="true" className="icon-ph" /> Pape</a>
                             <a href="/En-direct" className="quick-link"><img src="https://placehold.co/40x40/666666/ffffff?text=E" alt="" aria-hidden="true" className="icon-ph" /> En direct</a>
                         </div>
-                        <label htmlFor="voir-plus-toggle" className="voir-plus-label" role="button" tabIndex="0">
+                        <label htmlFor="voir-plus-toggle" className="voir-plus-label" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown} >
                             <span className="text-plus">Voir plus</span>
                             <span className="text-moins">Voir moins</span>
                             <svg className="accordion-icon" width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -71,7 +72,7 @@ const Menu = () => {
                     <div>
                         <input type="checkbox" id="acc-inter" className="accordion-checkbox" aria-hidden="true" tabIndex="-1" />
                         <h3>
-                            <label htmlFor="acc-inter" className="accordion-label" role="button" tabIndex="0">
+                            <label htmlFor="acc-inter" className="accordion-label" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown} >
                                 International
                                 <svg className="accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                             </label>
@@ -89,7 +90,7 @@ const Menu = () => {
                     <div>
                         <input type="checkbox" id="acc-planete" className="accordion-checkbox" aria-hidden="true" tabIndex="-1" />
                             <h3>
-                                <label htmlFor="acc-planete" className="accordion-label" role="button" tabIndex="0">
+                                <label htmlFor="acc-planete" className="accordion-label" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown} >
                                     Planète
                                     <svg className="accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                                 </label>
@@ -107,7 +108,7 @@ const Menu = () => {
                     <div>
                         <input type="checkbox" id="acc-politique" className="accordion-checkbox" aria-hidden="true" tabIndex="-1" />
                             <h3>
-                                <label htmlFor="acc-politique" className="accordion-label" role="button" tabIndex="0">
+                                <label htmlFor="acc-politique" className="accordion-label" role="button" tabIndex="0" onKeyDown={handleLabelKeyDown} >
                                     Politique
                                     <svg className="accordion-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                                 </label>

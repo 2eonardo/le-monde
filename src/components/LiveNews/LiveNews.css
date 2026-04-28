@@ -28,7 +28,7 @@
 
 .news-time {
     font-weight: bold;
-    color: #333;
+    color: var(--brand-divider);
     white-space: nowrap;
 }
 

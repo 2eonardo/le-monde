@@ -41,13 +41,13 @@ export default function MainNews() {
                     <article className="bottom-card">
                         <a href="/bottom1" >
                             <img src="https://placehold.co/100x100/888/fff" alt="News 1" />
-                            <p><img className="m-logo" alt="Logo Le Monde"/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod.</p>
+                            <p><img className="m-logo" alt="" aria-hidden="true"/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod.</p>
                         </a>
                     </article>
                     <article className="bottom-card">
                         <a href="/bottom2" >
                             <img src="https://placehold.co/100x100/888/fff" alt="News 2" />
-                            <p><img className="m-logo" alt="Logo Le Monde"/> Nunc eget risus a sem fringilla accumsan. Quisque</p>
+                            <p><img className="m-logo" alt="" aria-hidden="true"/> Nunc eget risus a sem fringilla accumsan. Quisque</p>
                         </a>
                     </article>
                 </div>
@@ -56,26 +56,26 @@ export default function MainNews() {
                     <article className="feed-item-large">
                         <a href="/news-feed-large-1" >
                             <div className="feed-content">
-                                <h3 className="feed-title"><img className="m-logo" alt="Logo Le Monde"/> Nullam commodo ultricies purus sed.</h3>
+                                <h3 className="feed-title"><img className="m-logo" alt="" aria-hidden="true"/> Nullam commodo ultricies purus sed.</h3>
                                 <p className="feed-description">Quisque a tempus nisi. Duis et lectus mi. Sed imperdiet sodales felis nec egestas. Morbi.</p>
                             </div>
                             <img src="https://placehold.co/200x150/888/fff" alt="News 3" className="feed-img-large" />
                         </a>
                     </article>
-
+                    {/* Articolo Piccolo */}
                     <article className="feed-item-small">
                         <a href="/news-feed-small-1" >
                             <img src="https://placehold.co/100x65/888/fff" alt="News 4" />
-                            <p className="feed-title-small"><img className="m-logo" alt="Logo Le Monde"/>Sed volutpat lobortis lectus sed sagittis. Integer maximus ligula in bibendum congue. Donec ornare consectetur quam, vel.</p>
+                            <p className="feed-title-small"><img className="m-logo" alt="" aria-hidden="true"/>Sed volutpat lobortis lectus sed sagittis. Integer maximus ligula in bibendum congue. Donec ornare consectetur quam, vel.</p>
                         </a>
                     </article>
-                    {/* Articolo Piccolo */}
+
 
                     {/* Ripeti Articolo Grande */}
                     <article className="feed-item-large">
                         <a href="/news-feed-large-2" >
                             <div className="feed-content">
-                                <h3 className="feed-title"><img className="m-logo" alt="Logo Le Monde"/> Praesent tristique diam non urna ornare, id imperdiet est.</h3>
+                                <h3 className="feed-title"><img className="m-logo" alt="" aria-hidden="true"/> Praesent tristique diam non urna ornare, id imperdiet est.</h3>
                                 <p className="feed-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             </div>
                             <img src="https://placehold.co/200x150/888/fff" alt="News 5" className="feed-img-large" />
@@ -86,7 +86,7 @@ export default function MainNews() {
                     <article className="feed-item-small">
                         <a href="/news-feed-small-2" >
                             <img src="https://placehold.co/100x65/888/fff" alt="News 6" />
-                            <p className="feed-title-small"><img className="m-logo" alt="Logo Le Monde"/>Quisque quis semper lacus, at convallis arcu. Aliquam erat volutpat. Suspendisse vestibulum.</p>
+                            <p className="feed-title-small"><img className="m-logo" alt="" aria-hidden="true"/>Quisque quis semper lacus, at convallis arcu. Aliquam erat volutpat. Suspendisse vestibulum.</p>
                         </a>
                     </article>
                 </div>
@@ -126,7 +126,7 @@ export default function MainNews() {
                         <a href="/news-feed-small-v2-1" >
                             <img src="https://placehold.co/100x65/888/fff" alt="News 9" />
                             <p className="feed-title-small">
-                                <img className="m-logo" alt="Logo Le Monde"/> Proin a pellentesque elit. Maecenas nibh ante, sodales id fermentum vel, fringilla et turpis. Sed egestas sollicitudin.
+                                <img className="m-logo" alt="" aria-hidden="true"/> Proin a pellentesque elit. Maecenas nibh ante, sodales id fermentum vel, fringilla et turpis. Sed egestas sollicitudin.
                             </p>
                         </a>
                     </article>
@@ -142,7 +142,7 @@ export default function MainNews() {
                     <a href="/grid1" >
                         <span className="section-label">CHRONIQUE</span>
                         <h3 className="opinion-title underlined">
-                            <img className="m-logo" alt="Logo Le Monde"/> «Quisque lectus lorem, egestas vel placerat et, gravida..... »
+                            <img className="m-logo" alt="" aria-hidden="true"/> «Quisque lectus lorem, egestas vel placerat et, gravida..... »
                         </h3>
                         <div className="author-info">
                             <img src="https://placehold.co/40x40/888/fff" alt="author" className="author-img" />
@@ -166,7 +166,7 @@ export default function MainNews() {
                     <a href="/grid3" >
                         <span className="section-label">TRIBUNE</span>
                         <h3 className="opinion-title">
-                            <img className="m-logo" alt="Logo Le Monde"/> « In gravida lectus eu tincidunt consectetur. Morbi ac accumsan... »
+                            <img className="m-logo" alt="" aria-hidden="true"/> « In gravida lectus eu tincidunt consectetur. Morbi ac accumsan... »
                         </h3>
                         <p className="author-name author-info">Orci Varius</p>
                     </a>
@@ -184,7 +184,7 @@ export default function MainNews() {
                 <article className="news-item-mini">
                     <a href="/grid5" >
                         <div className="mini-content">
-                            <h3 className="mini-title"><img className="m-logo" alt="Logo Le Monde"/> Vivamus ut leo ullamcorper, aliquam lectus in.</h3>
+                            <h3 className="mini-title"><img className="m-logo" alt="" aria-hidden="true"/> Vivamus ut leo ullamcorper, aliquam lectus in.</h3>
                         </div>
                         <img src="https://placehold.co/100x100/888/fff" alt="grid news 5" />
                     </a>

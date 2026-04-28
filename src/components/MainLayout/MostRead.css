@@ -95,7 +95,7 @@
 
 /* Stile della Freccia */
 .chevron {
-    width: 12px;  /* Alziamo a 12px, 6px era troppo piccolo! */
+    width: 12px;
     height: 12px;
     display: inline-block;
     transition: transform 0.3s;
@@ -115,24 +115,24 @@
         border-bottom: 1px solid var(--ui-border-light);
     }
 
-    /* 1. Mostra il pulsante (label) su mobile */
+
     .voir-plus-container {
         display: flex;
         justify-content: center;
         padding: 1.25rem 0;
     }
 
-    /* 2. Nascondi gli elementi dal 4° in poi di default */
+
     .most-read-grid .most-read-item:nth-child(n+4) {
         display: none;
     }
 
-    /* 3. MAGIA CSS: Se la checkbox è "checked", mostra gli elementi nascosti */
+
     .voir-plus-checkbox:checked ~ .most-read-grid .most-read-item:nth-child(n+4) {
         display: flex;
     }
 
-    /* 4. Cambia il testo del bottone quando è "checked" */
+
     .voir-plus-checkbox:checked ~ .voir-plus-container .voir-plus-btn .text-more {
         display: none;
     }
@@ -141,7 +141,7 @@
         display: inline;
     }
 
-    /* 5. Gira la freccia verso l'alto quando è "checked" */
+
     .voir-plus-checkbox:checked ~ .voir-plus-container .voir-plus-btn .chevron {
         transform: rotate(-180deg);
     }

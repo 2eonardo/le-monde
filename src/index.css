@@ -1,5 +1,4 @@
 :root {
-    /* Brand Colors */
     --brand-black: #000000;
     --brand-white: #ffffff;
     --brand-accent: #f1bd39;
@@ -7,22 +6,16 @@
     --brand-live: #bc0000;
     --ui-event-blue: #3675af;
     --ui-bg-soft: #f9f9f9;
-    /* UI Elements */
     --brand-divider: #333333;
-    --ui-border-light: #eeeeee;   /* Usato per sfondi grigio chiaro */
-    --ui-border-medium: #dddddd;  /* Usato per i bordi */
+    --ui-border-light: #eeeeee;
+    --ui-border-medium: #dddddd;
     --brand-hover-light: rgba(255, 255, 255, 0.15);
-
-    /* Typography */
     --text-dark: #1a1a1a;
     --text-muted: #bab7b7;
     --brand-blue-footer: #2c333a;
     --ui-text-muted-dark: #686868;
-
     --event-color: #f4f9fb;
 
-
-    /* Fonts con fallback per eliminare i warning */
     --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-narrow: "Arial Narrow", sans-serif;
     --font-serif: "Times New Roman", Times, serif;
@@ -39,15 +32,11 @@ body { width: 100%; min-height: 100vh; background-color: var(--brand-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;}
 
-/* GESTIONE SCROLL GLOBALE (Centralizzata qui per Menu e Services) */
 :root:has(#menu-toggle:checked),
 :root:has(#services-toggle:checked) {
     overflow: hidden ;
 }
 
-
-
-/* Helper Class per Accessibilità */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -55,7 +44,7 @@ body { width: 100%; min-height: 100vh; background-color: var(--brand-white);
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0); /* "Taglia" visivamente l'elemento */
+    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
 }

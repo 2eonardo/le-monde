@@ -1,16 +1,26 @@
-.services-checkbox { display: none; }
-
+.services-checkbox {
+    position: fixed;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
 .services-overlay {
-    display: none;
+    display: block;
+    visibility: hidden;
     position: fixed;
     top: 5rem;
-    left: 0; right: 0; bottom: 0;
+    left: 0; right: 0;
+    bottom: auto;
     background-color: var(--brand-white);
     z-index: 99999;
     overflow-y: auto;
 }
 
-.services-checkbox:checked ~ .services-overlay { display: block; }
+.services-checkbox:checked ~ .services-overlay {
+    visibility: visible;
+    opacity: 1;
+}
 
 .services-container {
     max-width: 1000px;
@@ -46,4 +56,5 @@
     .services-main-grid { grid-template-columns: 1fr; row-gap: 3rem; }
     .services-section:nth-child(even) { border-left: none; padding-left: 0; }
     .services-section { padding: 0 1rem; }
+    .services-overlay {bottom: 0}
 }

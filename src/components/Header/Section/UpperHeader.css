@@ -10,14 +10,12 @@
 .upper-header .nav-button { display: none; }
 
 @media (max-width: 1024px) {
-    /* Nasconde intere sezioni */
     .left-header, .right-header .language-switcher { display: none ; }
 
     /* Logo a sinistra */
     .center-header { flex: 1; justify-content: flex-start; margin-left: 0.5rem; }
     .upper-header .main-logo img { height: 2.2rem; }
 
-    /* Mostra il tasto menu tablet */
     .upper-header .nav-button { display: flex; align-items: center; justify-content: center; }
 }
 
